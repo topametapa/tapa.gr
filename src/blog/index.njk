@@ -2,7 +2,13 @@
 layout: base.njk
 title: Blog | Insights για Web Development
 description: Άρθρα, οδηγοί και insights για κατασκευή ιστοσελίδων, SEO, performance optimization και digital marketing στην Ελλάδα.
-permalink: /blog/
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.posts
+  size: 20
+  reverse: true
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 <section class="section bg-slate-50 border-b border-slate-200">
@@ -10,14 +16,22 @@ permalink: /blog/
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">Blog & Insights</h1>
       <p class="section-subtitle mx-auto text-center">Πρακτικές συμβουλές για ιστοσελίδες, eshop, SEO και performance</p>
+      {% if pagination.pageNumber > 0 %}
+      <p class="mt-2 text-sm text-slate-500">Σελίδα {{ pagination.pageNumber + 1 }} από {{ pagination.pages.length }}</p>
+      {% endif %}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    {# Total posts count #}
+    <div class="mb-8 text-sm text-slate-500">
+      {{ collections.posts.length }} άρθρα συνολικά
+    </div>
+
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for post in collections.posts | reverse %}
+      {% for post in posts %}
       <article class="card group flex flex-col transition-transform duration-300 hover:-translate-y-1 overflow-hidden p-0">
         {# Abstract tech image placeholder #}
         <div class="h-44 bg-gradient-to-br from-slate-100 via-slate-50 to-brand/10 relative overflow-hidden">
@@ -79,6 +93,44 @@ permalink: /blog/
       </div>
       {% endfor %}
     </div>
+
+    {# Pagination Navigation #}
+    {% if pagination.pages.length > 1 %}
+    <nav class="mt-16 flex items-center justify-center gap-2" aria-label="Πλοήγηση σελίδων">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Προηγούμενη
+      </a>
+      {% endif %}
+
+      <div class="flex items-center gap-1">
+        {% for pageEntry in pagination.pages %}
+        {% set pageIndex = loop.index0 %}
+        {% if pageIndex == pagination.pageNumber %}
+        <span class="w-10 h-10 flex items-center justify-center text-sm font-semibold text-white bg-brand rounded-lg">
+          {{ pageIndex + 1 }}
+        </span>
+        {% else %}
+        <a href="{{ pagination.hrefs[pageIndex] }}" class="w-10 h-10 flex items-center justify-center text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+          {{ pageIndex + 1 }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+        Επόμενη
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
   </div>
 </section>
 
