@@ -8,29 +8,29 @@
   }
 
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-dark-50 bg-dark-900;
   }
 
   ::selection {
-    @apply bg-brand/20 text-brand-900;
+    @apply bg-brand/30 text-dark-50;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900;
   }
 
   .btn-primary {
-    @apply bg-brand-600 text-white hover:bg-brand-700 focus:ring-brand px-6 py-3;
+    @apply bg-brand text-dark-900 hover:bg-brand-400 focus:ring-brand px-6 py-3;
   }
 
   .btn-secondary {
-    @apply bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-900 px-6 py-3;
+    @apply bg-dark-800 text-dark-50 hover:bg-dark-700 focus:ring-dark-700 px-6 py-3;
   }
 
   .btn-outline {
-    @apply border-2 border-brand text-brand hover:bg-brand hover:text-white focus:ring-brand px-6 py-3;
+    @apply border-2 border-brand text-brand hover:bg-brand hover:text-dark-900 focus:ring-brand px-6 py-3;
   }
 
   .section {
@@ -42,7 +42,11 @@
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-gray-600 mt-4 max-w-2xl;
+    @apply text-lg md:text-xl text-dark-400 mt-4 max-w-2xl;
+  }
+
+  .glass-card {
+    @apply bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl;
   }
 }
 
