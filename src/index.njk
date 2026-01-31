@@ -3,6 +3,17 @@ layout: base.njk
 title: Web Development Agency | Tapa.gr - Αθήνα
 description: Δημιουργία ιστοσελίδων και eshop στην Αθήνα. Performance-first, Core Web Vitals optimized. Δωρεάν προσφορά.
 schemaType: WebSite
+faq:
+  - question: "Γιατί το δικό σας site πιάνει 100/100 στο PageSpeed ενώ τα περισσότερα όχι;"
+    answer: "Γιατί δεν χρησιμοποιούμε έτοιμα, \"βαριά\" templates και page builders. Χτίζουμε custom με Jamstack αρχιτεκτονική, αφαιρώντας κάθε περιττό κώδικα ώστε το site σας να φορτώνει ακαριαία (τάπα) σε κάθε συσκευή."
+  - question: "Είναι το Jamstack καλό για SEO στην Ελλάδα;"
+    answer: "Είναι το καλύτερο. Η Google δίνει προτεραιότητα στην ταχύτητα (Core Web Vitals). Ένα στατικό site φορτώνει ταχύτερα, επιτρέποντας στα Googlebots να κάνουν index το περιεχόμενό σας πιο γρήγορα από τον ανταγωνισμό."
+  - question: "Πόσο ασφαλές είναι ένα site χωρίς WordPress;"
+    answer: "100% πιο ασφαλές. Χωρίς βάσεις δεδομένων και PHP scripts που τρέχουν στον server, δεν υπάρχει \"πόρτα\" για hackers. Είναι η πιο θωρακισμένη λύση που υπάρχει σήμερα."
+  - question: "Μπορώ να αλλάζω το περιεχόμενο μόνος μου;"
+    answer: "Φυσικά. Συνδέουμε το site με φιλικά προς τον χρήστη Headless CMS, ώστε να ανεβάζετε κείμενα και φωτογραφίες τόσο εύκολα όσο στο social media, χωρίς τον φόβο να \"σπάσετε\" το design."
+  - question: "Γιατί να επενδύσω σε custom site και όχι σε μια φθηνή λύση;"
+    answer: "Γιατί ένα φθηνό, αργό site διώχνει το 40% των επισκεπτών πριν καν δουν την προσφορά σας. Το custom site είναι επένδυση που επιστρέφει τα χρήματά της μέσω υψηλότερου conversion rate και χαμηλότερου κόστους διαφήμισης (Google Ads)."
 ---
 
 <section class="section bg-slate-50 border-b border-slate-200">
@@ -237,6 +248,81 @@ schemaType: WebSite
         <h3 class="font-bold mt-4 text-slate-900 text-lg">Launch</h3>
         <p class="text-slate-600 text-sm mt-2">Go-live με DNS, analytics, Search Console setup. 30 days support included.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="section-title">Συχνές Ερωτήσεις</h2>
+      <p class="text-slate-600 mt-4">Απαντήσεις στα πιο κοινά ερωτήματα για τη δημιουργία ιστοσελίδων.</p>
+    </div>
+    <div class="max-w-3xl mx-auto mt-12 space-y-4">
+      {% for item in faq %}
+      <details class="group faq-item">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-semibold text-slate-900 pr-4">{{ item.question }}</span>
+          <span class="text-brand text-2xl font-bold shrink-0 transition-transform duration-300 group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-slate-600 leading-relaxed">{{ item.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="insights">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+      <div>
+        <h2 class="section-title">Τελευταία Insights</h2>
+        <p class="text-slate-600 mt-2">Tips, strategies και case studies για web development.</p>
+      </div>
+      <a href="/blog/" class="btn btn-outline text-sm shrink-0">
+        Όλα τα Άρθρα →
+      </a>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in collections.posts | reverse %}
+      {% if loop.index <= 3 %}
+      <article class="card group flex flex-col border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30">
+        <div class="flex-1 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            {% if post.data.category %}
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+              {{ post.data.category }}
+            </span>
+            {% endif %}
+            <time class="text-xs text-slate-400" datetime="{{ post.date | dateIso }}">
+              {{ post.date | dateFormat }}
+            </time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand transition-colors">
+            <a href="{{ post.url }}" class="block">
+              {{ post.data.title }}
+            </a>
+          </h3>
+          {% if post.data.excerpt %}
+          <p class="mt-3 text-slate-600 text-sm line-clamp-2">{{ post.data.excerpt }}</p>
+          {% endif %}
+        </div>
+        <div class="px-6 pb-6">
+          <a href="{{ post.url }}" class="inline-flex items-center text-sm font-semibold text-brand hover:text-brand/80 transition-colors">
+            Διαβάστε περισσότερα
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      {% endif %}
+      {% else %}
+      <div class="col-span-full text-center py-12 card">
+        <p class="text-slate-500 mb-4">Τα πρώτα insights έρχονται σύντομα!</p>
+        <a href="/epikoinonia/" class="btn btn-primary">Ενημερωθείτε Πρώτοι</a>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
