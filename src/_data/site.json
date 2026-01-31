@@ -1,0 +1,14 @@
+{
+  "name": "Tapa.gr",
+  "url": "https://tapa.gr",
+  "phone": "+30 210 440 8777",
+  "email": "sales@tapa.gr",
+  "address": {
+    "street": "",
+    "city": "Αθήνα",
+    "country": "Ελλάδα"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/tapa-gr"
+  }
+}
