@@ -49,9 +49,9 @@
     @apply border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white focus:ring-slate-900 px-6 py-3;
   }
 
-  /* Sections */
+  /* Sections - generous spacing for breathing room */
   .section {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-20 md:py-28 lg:py-36;
   }
 
   .section-title {

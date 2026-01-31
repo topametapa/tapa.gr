@@ -18,16 +18,33 @@ permalink: /blog/
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for post in collections.posts | reverse %}
-      <article class="card group flex flex-col transition-transform duration-300 hover:-translate-y-1">
-        <div class="flex-1 p-6">
-          <div class="flex items-center gap-3 mb-4">
+      <article class="card group flex flex-col transition-transform duration-300 hover:-translate-y-1 overflow-hidden p-0">
+        {# Abstract tech image placeholder #}
+        <div class="h-44 bg-gradient-to-br from-slate-100 via-slate-50 to-brand/10 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-30">
+            <svg class="w-full h-full" viewBox="0 0 400 176" fill="none" aria-hidden="true">
+              <circle cx="350" cy="30" r="100" fill="currentColor" class="text-brand/20"/>
+              <circle cx="50" cy="150" r="70" fill="currentColor" class="text-slate-200"/>
+              <path d="M0 88 Q100 48 200 88 T400 88" stroke="currentColor" stroke-width="2" class="text-brand/30" fill="none"/>
+              <path d="M0 110 Q100 70 200 110 T400 110" stroke="currentColor" stroke-width="1" class="text-slate-300" fill="none"/>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4">
             {% if post.data.category %}
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-brand shadow-sm">
               {{ post.data.category }}
             </span>
             {% endif %}
+          </div>
+        </div>
+
+        <div class="flex-1 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <time class="text-xs text-slate-400" datetime="{{ post.date | dateIso }}">
+              {{ post.date | dateFormat }}
+            </time>
             {% if post.data.readingTime %}
-            <span class="text-xs text-slate-500">{{ post.data.readingTime }} min</span>
+            <span class="text-xs text-slate-400">· {{ post.data.readingTime }} min</span>
             {% endif %}
           </div>
 
@@ -45,14 +62,14 @@ permalink: /blog/
         <div class="px-6 pb-6 pt-4 border-t border-slate-100 mt-auto">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-semibold text-xs">
+              <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-slate-900 font-semibold text-xs">
                 MT
               </div>
               <span class="text-xs text-slate-500">{{ post.data.author | default("Michael Topouzis") }}</span>
             </div>
-            <time class="text-xs text-slate-400" datetime="{{ post.date | dateIso }}">
-              {{ post.date | dateFormat }}
-            </time>
+            <a href="{{ post.url }}" class="text-xs font-semibold text-brand hover:text-brand/80 transition-colors">
+              Διαβάστε →
+            </a>
           </div>
         </div>
       </article>

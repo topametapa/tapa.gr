@@ -286,17 +286,33 @@ faq:
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for post in collections.posts | reverse %}
       {% if loop.index <= 3 %}
-      <article class="card group flex flex-col border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30">
-        <div class="flex-1 p-6">
-          <div class="flex items-center gap-3 mb-4">
+      <article class="card group flex flex-col border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 overflow-hidden p-0">
+        {# Abstract tech image placeholder #}
+        <div class="h-40 bg-gradient-to-br from-slate-100 via-slate-50 to-brand/10 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-30">
+            <svg class="w-full h-full" viewBox="0 0 400 160" fill="none" aria-hidden="true">
+              <circle cx="350" cy="20" r="80" fill="currentColor" class="text-brand/20"/>
+              <circle cx="50" cy="140" r="60" fill="currentColor" class="text-slate-200"/>
+              <path d="M0 80 Q100 40 200 80 T400 80" stroke="currentColor" stroke-width="2" class="text-brand/30" fill="none"/>
+              <path d="M0 100 Q100 60 200 100 T400 100" stroke="currentColor" stroke-width="1" class="text-slate-300" fill="none"/>
+            </svg>
+          </div>
+          <div class="absolute bottom-4 left-4">
             {% if post.data.category %}
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-brand shadow-sm">
               {{ post.data.category }}
             </span>
             {% endif %}
+          </div>
+        </div>
+        <div class="flex-1 p-6">
+          <div class="flex items-center gap-3 mb-3">
             <time class="text-xs text-slate-400" datetime="{{ post.date | dateIso }}">
               {{ post.date | dateFormat }}
             </time>
+            {% if post.data.readingTime %}
+            <span class="text-xs text-slate-400">· {{ post.data.readingTime }} min</span>
+            {% endif %}
           </div>
           <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand transition-colors">
             <a href="{{ post.url }}" class="block">
