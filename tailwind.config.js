@@ -17,8 +17,7 @@ module.exports = {
           800: "#9a3412",
           900: "#7c2d12",
         },
-        dark: {
-          DEFAULT: "#0f172a",
+        slate: {
           50: "#f8fafc",
           100: "#f1f5f9",
           200: "#e2e8f0",
@@ -75,8 +74,9 @@ module.exports = {
           xl: "1200px",
         },
       },
-      backdropBlur: {
-        xs: "2px",
+      boxShadow: {
+        'card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        'card-hover': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       },
     },
   },

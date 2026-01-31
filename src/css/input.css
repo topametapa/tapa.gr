@@ -3,50 +3,114 @@
 @tailwind utilities;
 
 @layer base {
+  /* Font display swap for performance */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply text-dark-50 bg-dark-900;
+    @apply text-slate-600 bg-white antialiased;
   }
 
   ::selection {
-    @apply bg-brand/30 text-dark-50;
+    @apply bg-brand/20 text-slate-900;
+  }
+
+  /* Headings default to dark for contrast */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900;
   }
 }
 
 @layer components {
+  /* Buttons */
   .btn {
-    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900;
+    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .btn-primary {
-    @apply bg-brand text-dark-900 hover:bg-brand-400 focus:ring-brand px-6 py-3;
+    @apply bg-brand text-slate-900 hover:bg-brand-400 focus:ring-brand px-6 py-3;
   }
 
   .btn-secondary {
-    @apply bg-dark-800 text-dark-50 hover:bg-dark-700 focus:ring-dark-700 px-6 py-3;
+    @apply bg-slate-900 text-white hover:bg-slate-800 focus:ring-slate-900 px-6 py-3;
   }
 
   .btn-outline {
-    @apply border-2 border-brand text-brand hover:bg-brand hover:text-dark-900 focus:ring-brand px-6 py-3;
+    @apply border-2 border-brand text-brand hover:bg-brand hover:text-slate-900 focus:ring-brand px-6 py-3;
   }
 
+  .btn-outline-dark {
+    @apply border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white focus:ring-slate-900 px-6 py-3;
+  }
+
+  /* Sections */
   .section {
     @apply py-16 md:py-24 lg:py-32;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900;
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-dark-400 mt-4 max-w-2xl;
+    @apply text-lg md:text-xl text-slate-600 mt-4 max-w-2xl;
   }
 
-  .glass-card {
-    @apply bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl;
+  /* Cards - Light theme with hover effect */
+  .card {
+    @apply p-6 bg-white border border-slate-200 rounded-xl shadow-card transition-shadow duration-300 hover:shadow-card-hover;
+  }
+
+  .card-elevated {
+    @apply p-8 bg-white border border-slate-100 rounded-2xl shadow-lg;
+  }
+
+  /* Form inputs - Light theme */
+  .form-input {
+    @apply w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-colors;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-colors;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-colors resize-none;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-slate-700 mb-2;
+  }
+
+  /* FAQ accordion - Light theme */
+  .faq-item {
+    @apply p-6 bg-white border border-slate-200 rounded-xl transition-shadow hover:shadow-md;
+  }
+
+  /* Dark sections (for contrast) */
+  .section-dark {
+    @apply bg-slate-900 text-white;
+  }
+
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3 {
+    @apply text-white;
+  }
+
+  .section-dark p {
+    @apply text-slate-300;
+  }
+
+  /* Alt section background */
+  .section-alt {
+    @apply bg-slate-50;
   }
 }
 

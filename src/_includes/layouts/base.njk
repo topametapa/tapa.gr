@@ -78,44 +78,44 @@
   </script>
   {% endif %}
 </head>
-<body class="bg-dark-900 text-dark-50 antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded" aria-label="Μετάβαση στο κύριο περιεχόμενο">
+<body class="bg-white text-slate-600 antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-slate-900 focus:rounded" aria-label="Μετάβαση στο κύριο περιεχόμενο">
     Μετάβαση στο περιεχόμενο
   </a>
   {% include "partials/header.njk" %}
   <main id="main" role="main" tabindex="-1">
     {{ content | safe }}
   </main>
-  <footer role="contentinfo" class="bg-dark-950 text-dark-400 py-16 border-t border-dark-800">
+  <footer role="contentinfo" class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <a href="/" class="text-2xl font-bold text-dark-50" aria-label="Tapa.gr - Αρχική σελίδα">tapa<span class="text-brand">.gr</span></a>
+          <a href="/" class="text-2xl font-bold text-white" aria-label="Tapa.gr - Αρχική σελίδα">tapa<span class="text-brand">.gr</span></a>
           <p class="mt-4 text-sm leading-relaxed">Δημιουργία ιστοσελίδων και eshop που φέρνουν αποτελέσματα.</p>
         </div>
         <nav aria-label="Υπηρεσίες">
-          <h2 class="text-dark-50 font-semibold mb-4">Υπηρεσίες</h2>
+          <h2 class="text-white font-semibold mb-4">Υπηρεσίες</h2>
           <ul class="space-y-2 text-sm">
             <li><a href="/dimiourgia-istoselidon/" class="hover:text-brand transition-colors" aria-label="Υπηρεσία δημιουργίας ιστοσελίδων">Δημιουργία Ιστοσελίδων</a></li>
             <li><a href="/kataskevi-eshop/" class="hover:text-brand transition-colors" aria-label="Υπηρεσία κατασκευής eshop">Κατασκευή Eshop</a></li>
           </ul>
         </nav>
         <nav aria-label="Εταιρεία">
-          <h2 class="text-dark-50 font-semibold mb-4">Εταιρεία</h2>
+          <h2 class="text-white font-semibold mb-4">Εταιρεία</h2>
           <ul class="space-y-2 text-sm">
             <li><a href="/portfolio/" class="hover:text-brand transition-colors" aria-label="Δείτε το portfolio μας">Portfolio</a></li>
             <li><a href="/epikoinonia/" class="hover:text-brand transition-colors" aria-label="Επικοινωνήστε μαζί μας">Επικοινωνία</a></li>
           </ul>
         </nav>
         <div>
-          <h2 class="text-dark-50 font-semibold mb-4">Επικοινωνία</h2>
+          <h2 class="text-white font-semibold mb-4">Επικοινωνία</h2>
           <ul class="space-y-2 text-sm">
             <li><a href="tel:{{ site.phone }}" class="hover:text-brand transition-colors" aria-label="Καλέστε μας στο {{ site.phone }}">{{ site.phone }}</a></li>
             <li><a href="mailto:{{ site.email }}" class="hover:text-brand transition-colors" aria-label="Στείλτε email στο {{ site.email }}">{{ site.email }}</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-dark-800 mt-12 pt-8 text-sm text-center text-dark-500">
+      <div class="border-t border-slate-800 mt-12 pt-8 text-sm text-center text-slate-500">
         <p>&copy; {{ "" | currentYear }} Tapa.gr. All rights reserved.</p>
       </div>
     </div>
