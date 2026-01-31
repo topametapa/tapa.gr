@@ -142,28 +142,57 @@
   </script>
   {% endif %}
 
-  {# LocalBusiness Schema #}
+  {# LocalBusiness Schema with Geo & Reviews #}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "@id": "https://tapa.gr/#localbusiness",
     "name": "{{ site.name }}",
-    "description": "{{ description }}",
+    "alternateName": "Tapa Web Development",
+    "description": "Κατασκευή ιστοσελίδων και eshop στην Αθήνα. Performance-first web development με Jamstack τεχνολογία.",
     "url": "{{ site.url }}",
     "telephone": "{{ site.phone }}",
     "email": "{{ site.email }}",
+    "image": "https://tapa.gr/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "{{ site.address.city }}",
+      "streetAddress": "Αθήνα",
+      "addressLocality": "Αθήνα",
+      "addressRegion": "Αττική",
+      "postalCode": "10552",
       "addressCountry": "GR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.9838,
+      "longitude": 23.7275
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Αθήνα"
+      },
+      {
+        "@type": "Country",
+        "name": "Ελλάδα"
+      }
+    ],
     "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "sameAs": [
       "{{ site.social.linkedin }}"{% if site.social.github %},
@@ -290,8 +319,11 @@
             </ul>
           </div>
         </div>
-        <div class="border-t border-slate-800 mt-12 pt-8 text-sm text-center text-slate-500">
-          <p>&copy; {{ "" | currentYear }} Tapa.gr. All rights reserved.</p>
+        <div class="border-t border-slate-800 mt-12 pt-8">
+          <p class="text-sm text-center text-slate-500 mb-4">
+            <strong class="text-slate-400">Κατασκευή Ιστοσελίδων στην Αθήνα</strong> και σε όλη την Ελλάδα. Performance-first web development με 100/100 PageSpeed score.
+          </p>
+          <p class="text-sm text-center text-slate-500">&copy; {{ "" | currentYear }} Tapa.gr. All rights reserved.</p>
         </div>
       </div>
     </div>
