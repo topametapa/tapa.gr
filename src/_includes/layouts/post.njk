@@ -1,0 +1,125 @@
+---
+layout: base.njk
+---
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="mainEntityOfPage" content="https://tapa.gr{{ page.url }}">
+
+  <section class="section bg-slate-50 border-b border-slate-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a href="/" itemprop="item" class="hover:text-brand transition-colors"><span itemprop="name">Αρχική</span></a>
+              <meta itemprop="position" content="1">
+            </li>
+            <li aria-hidden="true">/</li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a href="/blog/" itemprop="item" class="hover:text-brand transition-colors"><span itemprop="name">Blog</span></a>
+              <meta itemprop="position" content="2">
+            </li>
+            <li aria-hidden="true">/</li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name" class="text-slate-900">{{ title }}</span>
+              <meta itemprop="position" content="3">
+            </li>
+          </ol>
+        </nav>
+
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          {% if category %}
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+            {{ category }}
+          </span>
+          {% endif %}
+          <span class="text-sm text-slate-500">
+            <time itemprop="datePublished" datetime="{{ date | dateIso }}">{{ date | dateFormat }}</time>
+          </span>
+          {% if readingTime %}
+          <span class="text-sm text-slate-500">{{ readingTime }} min read</span>
+          {% endif %}
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900" itemprop="headline">
+          {{ title }}
+        </h1>
+
+        {% if excerpt %}
+        <p class="mt-6 text-xl text-slate-600" itemprop="description">{{ excerpt }}</p>
+        {% endif %}
+
+        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-slate-200" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-slate-900 font-bold text-lg">
+            {{ author | default("MT") | slice(0, 2) | upper }}
+          </div>
+          <div>
+            <div class="font-semibold text-slate-900" itemprop="name">{{ author | default("Michael Topouzis") }}</div>
+            <div class="text-sm text-slate-500">{{ authorRole | default("Founder & Web Developer") }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg prose-slate prose-headings:text-slate-900 prose-a:text-brand prose-a:no-underline hover:prose-a:underline" itemprop="articleBody">
+          {{ content | safe }}
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-slate-200">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="text-sm text-slate-500">
+              Τελευταία ενημέρωση: <time itemprop="dateModified" datetime="{{ date | dateIso }}">{{ date | dateFormat }}</time>
+            </div>
+            <a href="/blog/" class="btn btn-outline text-sm">
+              ← Όλα τα Άρθρα
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-brand">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Θέλετε να βελτιώσετε την ταχύτητα του site σας;</h2>
+      <p class="mt-4 text-lg text-slate-800 max-w-xl mx-auto">Επικοινωνήστε μαζί μας για δωρεάν αξιολόγηση PageSpeed.</p>
+      <a href="/epikoinonia/" class="btn bg-slate-900 text-white hover:bg-slate-800 mt-6">
+        Δωρεάν Αξιολόγηση
+      </a>
+    </div>
+  </section>
+</article>
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ excerpt | default(description) }}",
+  "image": "{{ image | default('https://tapa.gr/og-image.jpg') }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ author | default('Michael Topouzis') }}",
+    "url": "https://linkedin.com/in/mtopouzis"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tapa.gr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tapa.gr/logo.png"
+    }
+  },
+  "datePublished": "{{ date | dateIso }}",
+  "dateModified": "{{ date | dateIso }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tapa.gr{{ page.url }}"
+  }
+}
+</script>
+{% endblock %}

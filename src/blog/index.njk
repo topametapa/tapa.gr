@@ -1,0 +1,86 @@
+---
+layout: base.njk
+title: Blog | Insights για Web Development
+description: Άρθρα, οδηγοί και insights για κατασκευή ιστοσελίδων, SEO, performance optimization και digital marketing στην Ελλάδα.
+---
+
+<section class="section bg-slate-50 border-b border-slate-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">Blog & Insights</h1>
+      <p class="section-subtitle mx-auto text-center">Πρακτικές συμβουλές για ιστοσελίδες, eshop, SEO και performance</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in collections.posts | reverse %}
+      <article class="card group flex flex-col transition-transform duration-300 hover:-translate-y-1">
+        <div class="flex-1 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            {% if post.data.category %}
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+              {{ post.data.category }}
+            </span>
+            {% endif %}
+            {% if post.data.readingTime %}
+            <span class="text-xs text-slate-500">{{ post.data.readingTime }} min</span>
+            {% endif %}
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 group-hover:text-brand transition-colors">
+            <a href="{{ post.url }}" class="block">
+              {{ post.data.title }}
+            </a>
+          </h2>
+
+          {% if post.data.excerpt %}
+          <p class="mt-3 text-slate-600 text-sm line-clamp-3">{{ post.data.excerpt }}</p>
+          {% endif %}
+        </div>
+
+        <div class="px-6 pb-6 pt-4 border-t border-slate-100 mt-auto">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-semibold text-xs">
+                MT
+              </div>
+              <span class="text-xs text-slate-500">{{ post.data.author | default("Michael Topouzis") }}</span>
+            </div>
+            <time class="text-xs text-slate-400" datetime="{{ post.date | dateIso }}">
+              {{ post.date | dateFormat }}
+            </time>
+          </div>
+        </div>
+      </article>
+      {% else %}
+      <div class="col-span-full text-center py-12">
+        <p class="text-slate-500">Δεν υπάρχουν άρθρα ακόμα. Έρχονται σύντομα!</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-slate-900">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-white">Θέλετε να λαμβάνετε τα νέα μας;</h2>
+    <p class="mt-4 text-slate-400 max-w-xl mx-auto">Εγγραφείτε στο newsletter μας για tips, case studies και web development insights.</p>
+    <form class="mt-8 flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="newsletter-email-blog" class="sr-only">Email</label>
+      <input
+        type="email"
+        id="newsletter-email-blog"
+        name="email"
+        required
+        placeholder="you@example.com"
+        class="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand"
+      >
+      <button type="submit" class="btn btn-primary whitespace-nowrap">
+        Εγγραφή
+      </button>
+    </form>
+  </div>
+</section>

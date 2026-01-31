@@ -9,6 +9,13 @@
     "country": "Ελλάδα"
   },
   "social": {
-    "linkedin": "https://linkedin.com/company/tapa-gr"
+    "linkedin": "https://linkedin.com/company/tapa-gr",
+    "github": "https://github.com/topametapa"
+  },
+  "founder": {
+    "name": "Michael Topouzis",
+    "role": "Founder & Web Developer",
+    "linkedin": "https://linkedin.com/in/mtopouzis",
+    "github": "https://github.com/topametapa"
   }
 }

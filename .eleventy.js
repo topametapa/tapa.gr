@@ -8,6 +8,16 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Date filters for blog
+  eleventyConfig.addFilter("dateIso", (date) => {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
+  eleventyConfig.addFilter("dateFormat", (date) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(date).toLocaleDateString('el-GR', options);
+  });
+
   return {
     dir: {
       input: "src",
