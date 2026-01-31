@@ -114,32 +114,128 @@ schemaType: WebSite
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="tapa-edge">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="section-title">Γιατί το site σας πρέπει να είναι Τάπα;</h2>
+      <p class="text-slate-600 mt-4">Τρεις πυλώνες που κάνουν τη διαφορά στο digital presence σας.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="card p-8 text-center transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mt-6 text-slate-900">Ταχύτητα</h3>
+        <p class="text-slate-600 mt-3">Sub-second load times. Το site σας φορτώνει πριν προλάβει ο επισκέπτης να αναβοσβήσει.</p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <div class="text-3xl font-bold text-brand">&lt;1s</div>
+          <div class="text-sm text-slate-500">Load Time</div>
+        </div>
+      </div>
+      <div class="card p-8 text-center transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mt-6 text-slate-900">Ασφάλεια</h3>
+        <p class="text-slate-600 mt-3">Static sites = zero attack surface. Καμία βάση δεδομένων, κανένα plugin vulnerability.</p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <div class="text-3xl font-bold text-brand">A+</div>
+          <div class="text-sm text-slate-500">Security Headers</div>
+        </div>
+      </div>
+      <div class="card p-8 text-center transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mt-6 text-slate-900">Conversion</h3>
+        <p class="text-slate-600 mt-3">CRO-optimized από το design phase. Κάθε pixel υπηρετεί έναν σκοπό: περισσότερους πελάτες.</p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <div class="text-3xl font-bold text-brand">+40%</div>
+          <div class="text-sm text-slate-500">Avg. Conversion Lift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tech-stack">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Powered by</p>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mt-8">
+      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <svg class="h-10 w-auto" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <path d="M50 5L5 95h30l15-30 15 30h30L50 5z" class="text-slate-700"/>
+        </svg>
+        <span class="text-xs font-medium text-slate-500">Eleventy</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" fill="#F38020"/>
+          <path d="M30 50h40M50 30v40" stroke="white" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span class="text-xs font-medium text-slate-500">Cloudflare</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M20 50l30-30 30 30-30 30-30-30z" fill="#38BDF8"/>
+          <path d="M50 20l15 15-15 15-15-15 15-15z" fill="#0EA5E9"/>
+        </svg>
+        <span class="text-xs font-medium text-slate-500">Tailwind CSS</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon points="50,10 90,80 10,80" fill="#77C1D2"/>
+          <polygon points="50,30 70,70 30,70" fill="#2D3441"/>
+        </svg>
+        <span class="text-xs font-medium text-slate-500">Alpine.js</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="section-title">Πώς Δουλεύουμε</h2>
       <p class="text-slate-600 mt-4">Διαφανής διαδικασία. Ξέρετε τι πληρώνετε και πότε το παραλαμβάνετε.</p>
     </div>
-    <div class="grid md:grid-cols-4 gap-8 mt-12">
-      <div class="text-center">
-        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold mx-auto">1</div>
-        <h3 class="font-bold mt-4 text-slate-900">Discovery</h3>
-        <p class="text-slate-600 text-sm mt-2">30-minute call. Καταλαβαίνουμε τους στόχους σας και τις τεχνικές απαιτήσεις.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+      <div class="card p-6 relative transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold text-xl">1</div>
+        <h3 class="font-bold mt-4 text-slate-900 text-lg">Audit</h3>
+        <p class="text-slate-600 text-sm mt-2">Αναλύουμε το υπάρχον site, τον ανταγωνισμό, και τις ευκαιρίες στην αγορά σας.</p>
+        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-slate-300" aria-hidden="true">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
       </div>
-      <div class="text-center">
-        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold mx-auto">2</div>
-        <h3 class="font-bold mt-4 text-slate-900">Proposal</h3>
-        <p class="text-slate-600 text-sm mt-2">Fixed-price quote με αναλυτικό scope. Καμία κρυφή χρέωση, καμία έκπληξη.</p>
+      <div class="card p-6 relative transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold text-xl">2</div>
+        <h3 class="font-bold mt-4 text-slate-900 text-lg">Design</h3>
+        <p class="text-slate-600 text-sm mt-2">Wireframes & mockups σε Figma. Εγκρίνετε κάθε οθόνη πριν γράψουμε κώδικα.</p>
+        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-slate-300" aria-hidden="true">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
       </div>
-      <div class="text-center">
-        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold mx-auto">3</div>
-        <h3 class="font-bold mt-4 text-slate-900">Build</h3>
-        <p class="text-slate-600 text-sm mt-2">Weekly demos σε staging. Βλέπετε την πρόοδο, δίνετε feedback σε real-time.</p>
+      <div class="card p-6 relative transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold text-xl">3</div>
+        <h3 class="font-bold mt-4 text-slate-900 text-lg">Development</h3>
+        <p class="text-slate-600 text-sm mt-2">Weekly demos σε staging. Βλέπετε την πρόοδο, δίνετε feedback real-time.</p>
+        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-slate-300" aria-hidden="true">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
       </div>
-      <div class="text-center">
-        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold mx-auto">4</div>
-        <h3 class="font-bold mt-4 text-slate-900">Launch</h3>
-        <p class="text-slate-600 text-sm mt-2">Go-live με DNS, analytics, Search Console. 30 days support included.</p>
+      <div class="card p-6 transition-transform duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold text-xl">4</div>
+        <h3 class="font-bold mt-4 text-slate-900 text-lg">Launch</h3>
+        <p class="text-slate-600 text-sm mt-2">Go-live με DNS, analytics, Search Console setup. 30 days support included.</p>
       </div>
     </div>
   </div>
@@ -155,3 +251,10 @@ schemaType: WebSite
     </div>
   </div>
 </section>
+
+<!-- Mobile Sticky Call Button -->
+<a href="tel:+302104408777" class="fixed bottom-6 right-6 z-50 md:hidden w-14 h-14 bg-brand rounded-full shadow-lg flex items-center justify-center hover:bg-brand/90 transition-colors" aria-label="Καλέστε μας">
+  <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+  </svg>
+</a>
