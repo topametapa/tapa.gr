@@ -17,16 +17,21 @@ faq:
 ---
 
 <section class="relative min-h-[85vh] flex items-center overflow-hidden">
-  {# Hero Background Image - LCP optimized #}
-  <img
-    src="/assets/hero-bg.jpg"
-    alt=""
-    class="absolute inset-0 w-full h-full object-cover object-center"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-    aria-hidden="true"
-  >
+  {# Hero Background Image - LCP optimized with WebP #}
+  <picture>
+    <source srcset="/assets/hero-bg.webp" type="image/webp">
+    <img
+      src="/assets/hero-bg.jpg"
+      alt=""
+      width="1920"
+      height="1280"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      aria-hidden="true"
+    >
+  </picture>
   {# Dark Overlay for text contrast #}
   <div class="absolute inset-0 bg-slate-900/70" aria-hidden="true"></div>
 
@@ -201,6 +206,8 @@ faq:
           <img
             src="https://www.vectorlogo.zone/logos/11tydev/11tydev-icon.svg"
             alt="Eleventy logo"
+            width="48"
+            height="48"
             class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
             loading="lazy"
           >
@@ -211,6 +218,8 @@ faq:
           <img
             src="https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg"
             alt="Cloudflare logo"
+            width="48"
+            height="48"
             class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
             loading="lazy"
           >
@@ -221,6 +230,8 @@ faq:
           <img
             src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
             alt="Tailwind CSS logo"
+            width="48"
+            height="48"
             class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
             loading="lazy"
           >
@@ -231,6 +242,8 @@ faq:
           <img
             src="https://www.vectorlogo.zone/logos/alpinejs/alpinejs-icon.svg"
             alt="Alpine.js logo"
+            width="48"
+            height="48"
             class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
             loading="lazy"
           >

@@ -21,7 +21,11 @@
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image" content="https://tapa.gr/og-image.jpg">
   <meta name="theme-color" content="#0f172a">
+  {# Preload CSS for faster render #}
+  <link rel="preload" href="/css/styles.css" as="style">
   <link rel="stylesheet" href="/css/styles.css">
+  {# Preconnect to external resources #}
+  <link rel="preconnect" href="https://www.vectorlogo.zone" crossorigin>
   {% block head %}{% endblock %}
 
   {# Organization Schema #}
