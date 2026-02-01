@@ -16,18 +16,31 @@ faq:
     answer: "Γιατί ένα φθηνό, αργό site διώχνει το 40% των επισκεπτών πριν καν δουν την προσφορά σας. Το custom site είναι επένδυση που επιστρέφει τα χρήματά της μέσω υψηλότερου conversion rate και χαμηλότερου κόστους διαφήμισης (Google Ads)."
 ---
 
-<section class="section bg-slate-50 border-b border-slate-200">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 text-balance">
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+  {# Hero Background Image - LCP optimized #}
+  <img
+    src="/assets/hero-bg.jpg"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover object-center"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    aria-hidden="true"
+  >
+  {# Dark Overlay for text contrast #}
+  <div class="absolute inset-0 bg-slate-900/70" aria-hidden="true"></div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-4xl mx-auto text-center py-20">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white text-balance">
         Επαγγελματική Δημιουργία Ιστοσελίδων & Eshop που Φέρνουν Πελάτες
       </h1>
-      <p class="text-xl text-slate-600 mt-6 max-w-2xl mx-auto">
-        Δεν φτιάχνουμε απλά websites. Φτιάχνουμε <strong class="text-slate-900">μηχανές απόκτησης πελατών</strong> που φορτώνουν σε milliseconds και κατατάσσονται στην πρώτη σελίδα της Google.
+      <p class="text-xl text-slate-200 mt-6 max-w-2xl mx-auto">
+        Δεν φτιάχνουμε απλά websites. Φτιάχνουμε <strong class="text-white">μηχανές απόκτησης πελατών</strong> που φορτώνουν σε milliseconds και κατατάσσονται στην πρώτη σελίδα της Google.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-        <a href="/epikoinonia/" class="btn btn-primary text-lg" aria-label="Στείλτε το project brief σας">Στείλτε Project Brief</a>
-        <a href="tel:+302104408777" class="btn btn-outline text-lg" aria-label="Καλέστε μας στο 210 440 8777">210 440 8777</a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+        <a href="/epikoinonia/" class="btn btn-primary text-lg shadow-lg shadow-brand/30" aria-label="Στείλτε το project brief σας">Στείλτε Project Brief</a>
+        <a href="tel:+302104408777" class="btn border-2 border-white text-white hover:bg-white hover:text-slate-900 text-lg px-6 py-3" aria-label="Καλέστε μας στο 210 440 8777">210 440 8777</a>
       </div>
     </div>
   </div>
@@ -180,33 +193,49 @@ faq:
     <div class="text-center">
       <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Powered by</p>
     </div>
-    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mt-8">
-      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-        <svg class="h-10 w-auto" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-          <path d="M50 5L5 95h30l15-30 15 30h30L50 5z" class="text-slate-700"/>
-        </svg>
-        <span class="text-xs font-medium text-slate-500">Eleventy</span>
-      </div>
-      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="45" fill="#F38020"/>
-          <path d="M30 50h40M50 30v40" stroke="white" stroke-width="8" stroke-linecap="round"/>
-        </svg>
-        <span class="text-xs font-medium text-slate-500">Cloudflare</span>
-      </div>
-      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
-          <path d="M20 50l30-30 30 30-30 30-30-30z" fill="#38BDF8"/>
-          <path d="M50 20l15 15-15 15-15-15 15-15z" fill="#0EA5E9"/>
-        </svg>
-        <span class="text-xs font-medium text-slate-500">Tailwind CSS</span>
-      </div>
-      <div class="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-        <svg class="h-10 w-auto" viewBox="0 0 100 100" aria-hidden="true">
-          <polygon points="50,10 90,80 10,80" fill="#77C1D2"/>
-          <polygon points="50,30 70,70 30,70" fill="#2D3441"/>
-        </svg>
-        <span class="text-xs font-medium text-slate-500">Alpine.js</span>
+    {# Glassmorphism card for logos #}
+    <div class="mt-8 max-w-3xl mx-auto p-8 rounded-2xl bg-white/60 backdrop-blur-sm border border-slate-200/50 shadow-lg">
+      <div class="flex flex-wrap justify-center items-center gap-10 sm:gap-16">
+        {# Eleventy #}
+        <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group" aria-label="Eleventy - Static Site Generator">
+          <img
+            src="https://www.vectorlogo.zone/logos/11tydev/11tydev-icon.svg"
+            alt="Eleventy logo"
+            class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
+            loading="lazy"
+          >
+          <span class="text-xs font-medium text-slate-500 group-hover:text-slate-900 transition-colors">Eleventy</span>
+        </a>
+        {# Cloudflare #}
+        <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group" aria-label="Cloudflare - Edge CDN">
+          <img
+            src="https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg"
+            alt="Cloudflare logo"
+            class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
+            loading="lazy"
+          >
+          <span class="text-xs font-medium text-slate-500 group-hover:text-slate-900 transition-colors">Cloudflare</span>
+        </a>
+        {# Tailwind CSS #}
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group" aria-label="Tailwind CSS - Utility-first CSS">
+          <img
+            src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+            alt="Tailwind CSS logo"
+            class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
+            loading="lazy"
+          >
+          <span class="text-xs font-medium text-slate-500 group-hover:text-slate-900 transition-colors">Tailwind CSS</span>
+        </a>
+        {# Alpine.js #}
+        <a href="https://alpinejs.dev/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group" aria-label="Alpine.js - Lightweight JS Framework">
+          <img
+            src="https://www.vectorlogo.zone/logos/alpinejs/alpinejs-icon.svg"
+            alt="Alpine.js logo"
+            class="h-12 w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
+            loading="lazy"
+          >
+          <span class="text-xs font-medium text-slate-500 group-hover:text-slate-900 transition-colors">Alpine.js</span>
+        </a>
       </div>
     </div>
   </div>
@@ -218,7 +247,7 @@ faq:
       <h2 class="section-title">Πώς Δουλεύουμε</h2>
       <p class="text-slate-600 mt-4">Διαφανής διαδικασία. Ξέρετε τι πληρώνετε και πότε το παραλαμβάνετε.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
       <div class="card p-6 relative transition-transform duration-300 hover:-translate-y-1">
         <div class="w-12 h-12 bg-brand text-slate-900 rounded-full flex items-center justify-center font-bold text-xl">1</div>
         <h3 class="font-bold mt-4 text-slate-900 text-lg">Audit</h3>
