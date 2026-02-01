@@ -19,21 +19,12 @@
                 Όλες οι Ιστοσελίδες →
               </a>
               <div class="border-t border-slate-100 my-2"></div>
-              <a href="/istoselides/estiatoria/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
-                Εστιατόρια & Καφέ
+              {# Loop over niches from niches.json #}
+              {% for n in niches %}
+              <a href="/istoselides/{{ n.slug }}/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700" aria-label="Ιστοσελίδες για {{ n.anchor_name }}">
+                {{ n.name }}
               </a>
-              <a href="/istoselides/iatroi/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
-                Ιατροί & Κλινικές
-              </a>
-              <a href="/istoselides/dikigoroi/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
-                Δικηγόροι & Νομικά
-              </a>
-              <a href="/istoselides/xenodocheia/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
-                Ξενοδοχεία & Καταλύματα
-              </a>
-              <a href="/istoselides/gymnastiria/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
-                Γυμναστήρια & Fitness
-              </a>
+              {% endfor %}
               <div class="border-t border-slate-100 my-2"></div>
               <a href="/kataskevi-eshop/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
                 Κατασκευή Eshop
@@ -71,21 +62,12 @@
         <a href="/istoselides/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-900 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
           Όλες οι Ιστοσελίδες
         </a>
-        <a href="/istoselides/estiatoria/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
-          Εστιατόρια & Καφέ
+        {# Loop over niches from niches.json #}
+        {% for n in niches %}
+        <a href="/istoselides/{{ n.slug }}/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors" aria-label="Ιστοσελίδες για {{ n.anchor_name }}">
+          {{ n.name }}
         </a>
-        <a href="/istoselides/iatroi/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
-          Ιατροί & Κλινικές
-        </a>
-        <a href="/istoselides/dikigoroi/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
-          Δικηγόροι & Νομικά
-        </a>
-        <a href="/istoselides/xenodocheia/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
-          Ξενοδοχεία & Καταλύματα
-        </a>
-        <a href="/istoselides/gymnastiria/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
-          Γυμναστήρια & Fitness
-        </a>
+        {% endfor %}
         <a href="/kataskevi-eshop/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
           Κατασκευή Eshop
         </a>

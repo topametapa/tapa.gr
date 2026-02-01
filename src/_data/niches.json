@@ -1,0 +1,321 @@
+[
+  {
+    "slug": "estiatoria",
+    "name": "Εστιατόρια",
+    "anchor_name": "Εστιατόρια",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Εστιατόρια",
+    "hero_subtitle": "Ιστοσελίδες για κρατήσεις, local αναζήτηση και mobile πελάτες.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για εστιατόρια με έμφαση σε ταχύτητα, μενού, χάρτη, local SEO και φόρμες κρατήσεων. Αυξήστε κλήσεις και αιτήματα.",
+    "icon": "utensils",
+    "primary": true,
+    "features": [
+      "Mobile-first μενού (QR-ready)",
+      "Google Maps + Local SEO δομή",
+      "Φόρμες κρατήσεων / επικοινωνίας",
+      "Εικόνες σε AVIF/WebP για ταχύτητα",
+      "Core Web Vitals προτεραιότητα"
+    ],
+    "includes": [
+      "Custom σχεδιασμός με food photography",
+      "Mobile-first responsive design",
+      "Online κρατήσεις τραπεζιού",
+      "Digital μενού (PDF ή interactive)",
+      "Google My Business optimization",
+      "Social media integration",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Κάνουμε το μενού πραγματικά mobile-first (QR-ready), ώστε να βρίσκει ο πελάτης αυτό που θέλει σε 2 κλικ.",
+      "Δένουμε τη σελίδα με Local SEO (χάρτης, δομή, περιεχόμενο) για να ανεβαίνουν οι κλήσεις από Google.",
+      "Βελτιώνουμε την ταχύτητα σε 4G/5G ώστε να μη χάνεται traffic από τουρίστες και περαστικούς.",
+      "Χτίζουμε καθαρά CTAs για κρατήσεις/τηλέφωνο χωρίς να γεμίζει η σελίδα 'φόρμες-θόρυβος'.",
+      "Ρυθμίζουμε tracking (calls / forms) για να ξέρεις τι φέρνει πελάτες — όχι απλά επισκέψεις."
+    ],
+    "related_slugs": ["xenodocheia", "gymnastiria"],
+    "faqs": [
+      {
+        "q": "Πόσο γρήγορα μπορεί να ανέβει μια ιστοσελίδα εστιατορίου;",
+        "a": "Συνήθως σε 10–20 εργάσιμες, ανάλογα με υλικό (μενού/φωτογραφίες) και γλώσσες."
+      },
+      {
+        "q": "Μπορεί να έχει online κρατήσεις;",
+        "a": "Ναι, με φόρμα αιτήματος ή σύνδεση σε υπάρχον σύστημα κρατήσεων."
+      },
+      {
+        "q": "Υποστηρίζετε delivery integration;",
+        "a": "Ναι, σύνδεση με e-food, Wolt ή custom ordering system για takeaway/delivery."
+      }
+    ]
+  },
+  {
+    "slug": "iatroi",
+    "name": "Ιατροί",
+    "anchor_name": "Ιατρούς",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Ιατρούς",
+    "hero_subtitle": "Επαγγελματική παρουσία με online ραντεβού και GDPR compliance.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για ιατρούς και κλινικές με online ραντεβού, GDPR compliance, ιατρικό portfolio. 100/100 PageSpeed.",
+    "icon": "heart",
+    "primary": true,
+    "features": [
+      "Online σύστημα ραντεβού",
+      "GDPR & Cookie compliance",
+      "Ιατρικό portfolio & πιστοποιήσεις",
+      "Τοπικό SEO για ιατρικές αναζητήσεις",
+      "Secure contact forms"
+    ],
+    "includes": [
+      "Custom σχεδιασμός με professional aesthetics",
+      "Mobile-first responsive design",
+      "Online booking system",
+      "Φόρμα επικοινωνίας (GDPR compliant)",
+      "Google My Business optimization",
+      "Παρουσίαση υπηρεσιών & βιογραφικό",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Δομή εμπιστοσύνης: υπηρεσίες, βιογραφικό, εμπειρία, και καθαρό 'ραντεβού' χωρίς σύγχυση.",
+      "Απλοποιούμε την επικοινωνία (ραντεβού/φόρμα) με έμφαση στη σαφήνεια και την αξιοπιστία.",
+      "Βελτιστοποιούμε για 'γιατρός + περιοχή + ειδικότητα' ώστε να πιάνεις υψηλού intent αναζητήσεις.",
+      "Φτιάχνουμε σελίδες υπηρεσιών που εξηγούν ανθρώπινα (όχι 'ιατρικά κείμενα-σεντόνια').",
+      "Ενσωματώνουμε μετρήσεις αιτημάτων ώστε να βλέπεις πόσα ραντεβού έρχονται από το site."
+    ],
+    "related_slugs": ["dikigoroi", "gymnastiria"],
+    "faqs": [
+      {
+        "q": "Είναι η ιστοσελίδα GDPR compliant;",
+        "a": "Απολύτως. Cookie consent, privacy policy, secure data handling είναι standard."
+      },
+      {
+        "q": "Μπορούν οι ασθενείς να κλείνουν ραντεβού online;",
+        "a": "Ναι, με σύστημα επιλογής ημερομηνίας, ώρας και υπηρεσίας, plus SMS/email reminders."
+      }
+    ]
+  },
+  {
+    "slug": "dikigoroi",
+    "name": "Δικηγόροι",
+    "anchor_name": "Δικηγόρους",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Δικηγόρους",
+    "hero_subtitle": "Εταιρικό προφίλ που εκπέμπει αξιοπιστία και επαγγελματισμό.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για δικηγόρους και νομικά γραφεία. Εταιρικό προφίλ, τομείς δικαίου, secure contact. 100/100 PageSpeed.",
+    "icon": "scale",
+    "primary": true,
+    "features": [
+      "Εταιρικό προφίλ & ομάδα",
+      "Τομείς δικαίου αναλυτικά",
+      "Secure contact forms",
+      "Blog για νομικά άρθρα (SEO)",
+      "Σοβαρό, επαγγελματικό design"
+    ],
+    "includes": [
+      "Εταιρικό design με professional aesthetics",
+      "Mobile-first responsive design",
+      "Secure contact forms",
+      "Παρουσίαση υπηρεσιών & ομάδας",
+      "Blog/Αρθρογραφία section",
+      "Google My Business optimization",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Δομή αξιοπιστίας: εταιρικό προφίλ, ομάδα, τομείς δικαίου με σαφήνεια και επαγγελματισμό.",
+      "Σχεδιάζουμε σοβαρό, εταιρικό design που εμπνέει εμπιστοσύνη από την πρώτη ματιά.",
+      "Secure φόρμες επικοινωνίας για εμπιστευτικά αιτήματα (κρυπτογράφηση, GDPR).",
+      "Blog section για νομικά άρθρα που ενισχύουν το SEO και δείχνουν εξειδίκευση.",
+      "Tracking αιτημάτων για να ξέρεις ποιοι τομείς δικαίου φέρνουν τους περισσότερους πελάτες."
+    ],
+    "related_slugs": ["iatroi", "fotografoi"],
+    "faqs": [
+      {
+        "q": "Μπορώ να έχω blog με νομικά άρθρα;",
+        "a": "Ναι, το blog ενισχύει το SEO και δείχνει την εξειδίκευσή σας σε συγκεκριμένους τομείς δικαίου."
+      },
+      {
+        "q": "Είναι ασφαλείς οι φόρμες επικοινωνίας;",
+        "a": "Απολύτως. Κρυπτογραφημένη επικοινωνία για εμπιστευτικά αιτήματα."
+      }
+    ]
+  },
+  {
+    "slug": "xenodocheia",
+    "name": "Ξενοδοχεία",
+    "anchor_name": "Ξενοδοχεία",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Ξενοδοχεία",
+    "hero_subtitle": "Απευθείας κρατήσεις χωρίς commission σε OTAs.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για ξενοδοχεία και καταλύματα. Booking engine, virtual tours, OTA integration. 100/100 PageSpeed.",
+    "icon": "building",
+    "primary": true,
+    "features": [
+      "Booking engine integration",
+      "Virtual tours & galleries",
+      "OTA sync (Booking, Airbnb)",
+      "Πολύγλωσσο content",
+      "Stunning visuals & fast loading"
+    ],
+    "includes": [
+      "Custom σχεδιασμός με stunning visuals",
+      "Mobile-first responsive design",
+      "Booking engine integration",
+      "Φωτογραφίες υψηλής ανάλυσης",
+      "Google My Business optimization",
+      "Πολύγλωσσο content (optional)",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Booking engine integration για απευθείας κρατήσεις χωρίς προμήθειες OTAs.",
+      "Πολύγλωσσο content (EN/DE/FR) για τουριστικό κοινό χωρίς να βαραίνει η ταχύτητα.",
+      "Virtual tours και galleries με optimized images για εντυπωσιακή παρουσίαση.",
+      "Sync με Booking/Airbnb για ενιαία διαχείριση διαθεσιμότητας.",
+      "Tracking κρατήσεων για να ξέρεις ποιο κανάλι φέρνει τα καλύτερα αποτελέσματα."
+    ],
+    "related_slugs": ["estiatoria", "rent-a-car"],
+    "faqs": [
+      {
+        "q": "Μπορώ να δέχομαι απευθείας κρατήσεις;",
+        "a": "Ναι, με booking engine που σας γλιτώνει τις προμήθειες των OTAs."
+      },
+      {
+        "q": "Υποστηρίζετε πολλές γλώσσες;",
+        "a": "Ναι, Ελληνικά, Αγγλικά, Γερμανικά, Γαλλικά και άλλες κατόπιν αιτήματος."
+      }
+    ]
+  },
+  {
+    "slug": "gymnastiria",
+    "name": "Γυμναστήρια",
+    "anchor_name": "Γυμναστήρια",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Γυμναστήρια",
+    "hero_subtitle": "Νέα μέλη online με class schedules και trial bookings.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για γυμναστήρια και fitness studios. Class schedules, membership forms, trainer profiles. 100/100 PageSpeed.",
+    "icon": "dumbbell",
+    "primary": true,
+    "features": [
+      "Class schedules & booking",
+      "Online membership forms",
+      "Trainer profiles",
+      "Trial class booking",
+      "Ενεργητικό, motivating design"
+    ],
+    "includes": [
+      "Δυναμικό design με energy aesthetics",
+      "Mobile-first responsive design",
+      "Class schedule system",
+      "Online membership forms",
+      "Google My Business optimization",
+      "Social media integration",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Class schedules εύκολα στην πλοήγηση, ώστε να βρίσκει ο πελάτης πρόγραμμα σε δευτερόλεπτα.",
+      "Online trial booking για να μειώνονται τα εμπόδια στην πρώτη επαφή.",
+      "Trainer profiles που χτίζουν εμπιστοσύνη και δείχνουν την ομάδα σας.",
+      "Membership forms με επιλογή πακέτου και secure payment integration.",
+      "Tracking εγγραφών για να ξέρεις ποια προγράμματα φέρνουν νέα μέλη."
+    ],
+    "related_slugs": ["iatroi", "fotografoi"],
+    "faqs": [
+      {
+        "q": "Μπορούν οι πελάτες να κλείνουν δοκιμαστικό μάθημα;",
+        "a": "Ναι, με απλή φόρμα trial class booking για να δοκιμάσουν χωρίς δέσμευση."
+      },
+      {
+        "q": "Υποστηρίζετε online εγγραφές μελών;",
+        "a": "Ναι, με επιλογή πακέτου και secure payment integration."
+      }
+    ]
+  },
+  {
+    "slug": "fotografoi",
+    "name": "Φωτογράφοι",
+    "anchor_name": "Φωτογράφους",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Φωτογράφους",
+    "hero_subtitle": "Portfolio που φορτώνει αστραπιαία και εντυπωσιάζει.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για φωτογράφους με ultra-fast galleries, SEO για τοπικές αναζητήσεις, proofing και παράδοση υλικού.",
+    "icon": "camera",
+    "primary": true,
+    "features": [
+      "Ultra-fast galleries",
+      "SEO για «φωτογράφος + περιοχή»",
+      "Proofing / επιλογή φωτογραφιών",
+      "Brand-consistent παρουσίαση",
+      "Analytics για αιτήματα"
+    ],
+    "includes": [
+      "Custom gallery design",
+      "Mobile-first responsive design",
+      "Fast-loading image optimization",
+      "Contact/booking forms",
+      "Google My Business optimization",
+      "Social media integration",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Ultra-fast galleries με AVIF/WebP optimization και lazy loading για άμεση εμπειρία.",
+      "SEO βελτιστοποίηση για 'φωτογράφος + περιοχή' ώστε να πιάνεις τοπικές αναζητήσεις.",
+      "Proofing system για επιλογή φωτογραφιών και παράδοση υλικού στους πελάτες.",
+      "Brand-consistent design που αναδεικνύει το στυλ και την αισθητική σου.",
+      "Analytics για να βλέπεις ποια galleries φέρνουν τα περισσότερα αιτήματα."
+    ],
+    "related_slugs": ["dikigoroi", "rent-a-car"],
+    "faqs": [
+      {
+        "q": "Θα φορτώνουν γρήγορα οι φωτογραφίες;",
+        "a": "Ναι, με AVIF/WebP optimization και lazy loading για άμεση εμπειρία."
+      },
+      {
+        "q": "Μπορώ να έχω proofing για πελάτες;",
+        "a": "Ναι, με σύστημα επιλογής φωτογραφιών και παράδοσης υλικού."
+      }
+    ]
+  },
+  {
+    "slug": "rent-a-car",
+    "name": "Rent a Car",
+    "anchor_name": "Rent a Car",
+    "h1_title": "Κατασκευή Ιστοσελίδας για Rent a Car",
+    "hero_subtitle": "Multi-language εμπειρία με απευθείας αιτήματα κράτησης.",
+    "meta_desc": "Κατασκευή ιστοσελίδας για rent a car με πολλαπλές γλώσσες, landing pages ανά περιοχή, φόρμες κράτησης. Στόχευση τουριστών.",
+    "icon": "car",
+    "primary": true,
+    "features": [
+      "Πολλαπλές γλώσσες",
+      "Landing pages ανά περιοχή/νησί",
+      "Φόρμες κράτησης/αιτήματος",
+      "Tracking κλήσεων & leads",
+      "Βελτιστοποίηση για 4G/5G"
+    ],
+    "includes": [
+      "Multi-language design",
+      "Mobile-first responsive design",
+      "Booking request forms",
+      "Fleet presentation",
+      "Google My Business optimization",
+      "Landing pages per location",
+      "SSL & Security headers",
+      "30 μέρες support"
+    ],
+    "proof_points": [
+      "Multi-language εμπειρία για τουρίστες, χωρίς να βαραίνει η ταχύτητα της ιστοσελίδας.",
+      "Landing pages ανά περιοχή/νησί για να πιάνεις στοχευμένες αναζητήσεις και να ανεβαίνει το conversion.",
+      "Καθαρό request flow (ημερομηνίες/παραλαβή/παράδοση) ώστε να μειώνονται τα 'μπες-βγες'.",
+      "Tracking αιτημάτων και κλήσεων για να ξέρεις ποια σελίδα φέρνει κρατήσεις.",
+      "Έμφαση σε αξιοπιστία (όροι, πολιτικές, ασφάλεια) ώστε να μειώνονται οι ανασφάλειες πριν το αίτημα."
+    ],
+    "related_slugs": ["xenodocheia", "fotografoi"],
+    "faqs": [
+      {
+        "q": "Υποστηρίζετε πολλές γλώσσες;",
+        "a": "Ναι, EN/DE/FR/IT και άλλες για τουριστικό κοινό."
+      },
+      {
+        "q": "Μπορώ να έχω landing pages ανά νησί;",
+        "a": "Ναι, με στοχευμένο SEO για κάθε περιοχή/νησί."
+      }
+    ]
+  }
+]

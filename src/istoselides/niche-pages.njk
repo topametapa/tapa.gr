@@ -1,0 +1,13 @@
+---
+pagination:
+  data: niches
+  size: 1
+  alias: niche
+permalink: "/istoselides/{{ niche.slug }}/"
+layout: niche.njk
+eleventyComputed:
+  title: "{{ niche.h1_title }} | Tapa.gr"
+  description: "{{ niche.meta_desc }}"
+eleventyExcludeFromCollections: true
+---
+{# Layout renders everything from niche data #}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | Tapa.gr</title>
-  <meta name="description" content="{{ description }}">
+  <meta name="description" content="{{ description | truncate(155, true, '') }}">
   <link rel="canonical" href="https://tapa.gr{{ page.url }}">
   <link rel="alternate" hreflang="el" href="https://tapa.gr{{ page.url }}">
   <link rel="alternate" hreflang="x-default" href="https://tapa.gr{{ page.url }}">
@@ -306,9 +306,9 @@
             <h2 class="text-white font-semibold mb-4">Ιστοσελίδες</h2>
             <ul class="space-y-2 text-sm">
               <li><a href="/istoselides/" class="hover:text-brand-700 transition-colors">Όλοι οι Κλάδοι</a></li>
-              <li><a href="/istoselides/estiatoria/" class="hover:text-brand-700 transition-colors">Εστιατόρια</a></li>
-              <li><a href="/istoselides/iatroi/" class="hover:text-brand-700 transition-colors">Ιατροί</a></li>
-              <li><a href="/istoselides/dikigoroi/" class="hover:text-brand-700 transition-colors">Δικηγόροι</a></li>
+              {% for n in niches %}
+              <li><a href="/istoselides/{{ n.slug }}/" class="hover:text-brand-700 transition-colors" aria-label="Ιστοσελίδες για {{ n.anchor_name }}">{{ n.name }}</a></li>
+              {% endfor %}
               <li><a href="/kataskevi-eshop/" class="hover:text-brand-700 transition-colors">Κατασκευή Eshop</a></li>
               <li>
                 <a href="https://pshop.gr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-slate-500 hover:text-brand-700 transition-colors">

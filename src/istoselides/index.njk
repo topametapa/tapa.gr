@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Κατασκευή Ιστοσελίδων | Tapa.gr
-description: Επαγγελματική κατασκευή ιστοσελίδων για κάθε κλάδο. Εστιατόρια, Ιατροί, Δικηγόροι, Ξενοδοχεία, Γυμναστήρια. 100/100 PageSpeed, SEO-optimized.
+description: Κατασκευή ιστοσελίδων με έμφαση σε ταχύτητα, SEO και conversion. Εξειδικευμένες λύσεις για εστιατόρια, ιατρούς, δικηγόρους, ξενοδοχεία.
 schemaType: Service
 ---
 
@@ -16,103 +16,87 @@ schemaType: Service
         </ol>
       </nav>
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
-        Κατασκευή Ιστοσελίδων για Κάθε Κλάδο
+        Κατασκευή Ιστοσελίδων
       </h1>
       <p class="section-subtitle mx-auto text-center">
-        Εξειδικευμένες λύσεις web development για επαγγελματίες. Κάθε site είναι custom-built για τις ανάγκες του κλάδου σας.
+        Ιστοσελίδες που φέρνουν πελάτες, όχι απλά επισκέψεις.
       </p>
     </div>
   </div>
 </section>
 
+{# Intro Section - ~200 words #}
 <section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto prose prose-slate prose-lg">
+      <p>
+        Στην Tapa, δεν φτιάχνουμε απλά ιστοσελίδες — φτιάχνουμε <strong>εργαλεία που φέρνουν αποτελέσματα</strong>. Κάθε project ξεκινάει με μια απλή ερώτηση: «Τι θέλει να πετύχει η επιχείρησή σου;»
+      </p>
+      <p>
+        Η φιλοσοφία μας βασίζεται σε τρεις πυλώνες: <strong>ταχύτητα</strong>, <strong>SEO</strong> και <strong>conversion</strong>. Ένα site που φορτώνει σε λιγότερο από 1 δευτερόλεπτο, εμφανίζεται στην κορυφή του Google, και μετατρέπει τους επισκέπτες σε πελάτες.
+      </p>
+      <p>
+        Χρησιμοποιούμε <strong>Jamstack τεχνολογία</strong> — static sites που φορτώνουν από CDN σε όλο τον κόσμο. Το αποτέλεσμα: <strong>100/100 PageSpeed</strong>, μηδενικό downtime, και κορυφαία ασφάλεια χωρίς plugins και updates.
+      </p>
+      <p>
+        Δεν πουλάμε templates. Κάθε ιστοσελίδα σχεδιάζεται <strong>custom</strong> για τον κλάδο και τις ανάγκες σου. Είτε είσαι εστιατόριο που θέλει περισσότερες κρατήσεις, είτε γιατρός που θέλει online ραντεβού, είτε δικηγόρος που χρειάζεται εταιρική παρουσία — έχουμε την εμπειρία να το φτιάξουμε σωστά.
+      </p>
+    </div>
+  </div>
+</section>
+
+{# Niche Grid - Dynamic from niches.json #}
+<section class="section section-alt">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="section-title">Εξειδίκευση ανά Κλάδο</h2>
       <p class="text-slate-600 mt-4">
-        Δεν φτιάχνουμε generic templates. Κάθε ιστοσελίδα σχεδιάζεται με βάση τις ιδιαίτερες απαιτήσεις του κλάδου σας.
+        Κάθε κλάδος έχει διαφορετικές ανάγκες. Δες τις εξειδικευμένες λύσεις μας:
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {# Restaurant #}
-      <a href="/istoselides/estiatoria/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      {% for n in niches %}
+      {% if n.primary %}
+      <a href="/istoselides/{{ n.slug }}/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" aria-label="Ιστοσελίδες για {{ n.anchor_name }}">
         <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% if n.icon == "utensils" %}
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Εστιατόρια & Καφέ</h3>
-        <p class="text-slate-600 mt-3 text-sm">Online μενού, κρατήσεις, delivery integration, Google Maps.</p>
-        <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand-700">
-          Μάθετε περισσότερα →
-        </span>
-      </a>
-
-      {# Doctors #}
-      <a href="/istoselides/iatroi/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% elif n.icon == "heart" %}
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Ιατροί & Κλινικές</h3>
-        <p class="text-slate-600 mt-3 text-sm">Online ραντεβού, GDPR compliance, ιατρικό portfolio.</p>
-        <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand-700">
-          Μάθετε περισσότερα →
-        </span>
-      </a>
-
-      {# Lawyers #}
-      <a href="/istoselides/dikigoroi/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% elif n.icon == "scale" %}
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Δικηγόροι & Νομικά Γραφεία</h3>
-        <p class="text-slate-600 mt-3 text-sm">Εταιρικό προφίλ, υπηρεσίες, secure contact forms.</p>
-        <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand-700">
-          Μάθετε περισσότερα →
-        </span>
-      </a>
-
-      {# Hotels #}
-      <a href="/istoselides/xenodocheia/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% elif n.icon == "building" %}
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Ξενοδοχεία & Καταλύματα</h3>
-        <p class="text-slate-600 mt-3 text-sm">Booking engine, virtual tours, σύνδεση με OTAs.</p>
-        <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand-700">
-          Μάθετε περισσότερα →
-        </span>
-      </a>
-
-      {# Gyms #}
-      <a href="/istoselides/gymnastiria/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% elif n.icon == "dumbbell" %}
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            {% elif n.icon == "camera" %}
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            {% elif n.icon == "car" %}
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8M8 17v-4m8 4v-4m-8 0h8m-8 0l-2-4h12l-2 4M6 17H4a1 1 0 01-1-1v-1a2 2 0 012-2h1m14 4h2a1 1 0 001-1v-1a2 2 0 00-2-2h-1"/>
+            {% else %}
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+            {% endif %}
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Γυμναστήρια & Fitness</h3>
-        <p class="text-slate-600 mt-3 text-sm">Class schedules, membership forms, trainer profiles.</p>
+        <p class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">Ιστοσελίδες για {{ n.anchor_name }}</p>
+        <p class="text-slate-600 mt-3 text-sm">{{ n.hero_subtitle }}</p>
         <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand-700">
           Μάθετε περισσότερα →
         </span>
       </a>
+      {% endif %}
+      {% endfor %}
 
-      {# Custom/Other #}
-      <a href="/epikoinonia/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-slate-900 text-white">
+      {# Custom/Other CTA #}
+      <a href="/epikoinonia/" class="card group p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-slate-900 text-white" aria-label="Επικοινωνία για custom project">
         <div class="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Άλλος Κλάδος;</h3>
+        <p class="text-xl font-bold text-white group-hover:text-brand transition-colors">Άλλος Κλάδος;</p>
         <p class="text-slate-300 mt-3 text-sm">Στείλτε μας το project σας. Φτιάχνουμε custom λύσεις για κάθε επιχείρηση.</p>
         <span class="inline-flex items-center mt-4 text-sm font-semibold text-brand">
           Επικοινωνία →
@@ -122,7 +106,8 @@ schemaType: Service
   </div>
 </section>
 
-<section class="section section-alt">
+{# Why Specialized Section #}
+<section class="section">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
@@ -180,6 +165,7 @@ schemaType: Service
   </div>
 </section>
 
+{# CTA Section #}
 <section class="section bg-brand">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Έτοιμοι να Ξεκινήσετε;</h2>
