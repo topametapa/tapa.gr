@@ -85,7 +85,7 @@ layout: base.njk
           </li>
           {% endfor %}
         </ul>
-        {% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car") %}
+        {% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car" or niche.slug == "xenodocheia") %}
         <a href="#protasi-form" class="btn btn-primary mt-8">
           Ζητήστε Πρόταση →
         </a>
@@ -248,6 +248,8 @@ layout: base.njk
       {% include "partials/forms/iatroi-form.njk" %}
     {% elif niche and niche.slug == "rent-a-car" %}
       {% include "partials/forms/rentacar-form.njk" %}
+    {% elif niche and niche.slug == "xenodocheia" %}
+      {% include "partials/forms/hospitality-form.njk" %}
     {% else %}
     <a href="/epikoinonia/" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors mt-8 shadow-lg">
       Δωρεάν Πρόταση →
@@ -257,7 +259,7 @@ layout: base.njk
 </section>
 
 {# Sticky CTA for niches with forms #}
-{% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car") %}
+{% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car" or niche.slug == "xenodocheia") %}
 <div class="fixed bottom-6 right-6 z-40 hidden sm:block">
   <a
     href="#protasi-form"
