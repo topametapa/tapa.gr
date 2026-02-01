@@ -13,7 +13,11 @@
       "Bash(git push:*)",
       "Bash(gh repo create:*)",
       "Bash(git remote set-url:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(findstr:*)",
+      "Bash(copy:*)",
+      "Bash(npx sharp:*)",
+      "Bash(xargs sed:*)"
     ]
   }
 }

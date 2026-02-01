@@ -42,7 +42,7 @@
   }
 
   .btn-outline {
-    @apply border-2 border-brand text-brand hover:bg-brand hover:text-slate-900 focus:ring-brand px-6 py-3;
+    @apply border-2 border-brand text-brand-700 hover:bg-brand hover:text-slate-900 focus:ring-brand px-6 py-3;
   }
 
   .btn-outline-dark {

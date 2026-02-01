@@ -37,15 +37,15 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
         <div class="h-44 bg-gradient-to-br from-slate-100 via-slate-50 to-brand/10 relative overflow-hidden">
           <div class="absolute inset-0 opacity-30">
             <svg class="w-full h-full" viewBox="0 0 400 176" fill="none" aria-hidden="true">
-              <circle cx="350" cy="30" r="100" fill="currentColor" class="text-brand/20"/>
+              <circle cx="350" cy="30" r="100" fill="currentColor" class="text-brand-700/20"/>
               <circle cx="50" cy="150" r="70" fill="currentColor" class="text-slate-200"/>
-              <path d="M0 88 Q100 48 200 88 T400 88" stroke="currentColor" stroke-width="2" class="text-brand/30" fill="none"/>
+              <path d="M0 88 Q100 48 200 88 T400 88" stroke="currentColor" stroke-width="2" class="text-brand-700/30" fill="none"/>
               <path d="M0 110 Q100 70 200 110 T400 110" stroke="currentColor" stroke-width="1" class="text-slate-300" fill="none"/>
             </svg>
           </div>
           <div class="absolute bottom-4 left-4">
             {% if post.data.category %}
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-brand shadow-sm">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-brand-700 shadow-sm">
               {{ post.data.category }}
             </span>
             {% endif %}
@@ -62,7 +62,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
             {% endif %}
           </div>
 
-          <h2 class="text-xl font-bold text-slate-900 group-hover:text-brand transition-colors">
+          <h2 class="text-xl font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
             <a href="{{ post.url }}" class="block">
               {{ post.data.title }}
             </a>
@@ -81,7 +81,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
               </div>
               <span class="text-xs text-slate-500">{{ post.data.author | default("Michael Topouzis") }}</span>
             </div>
-            <a href="{{ post.url }}" class="text-xs font-semibold text-brand hover:text-brand/80 transition-colors">
+            <a href="{{ post.url }}" class="text-xs font-semibold text-brand-700 hover:text-brand-700/80 transition-colors">
               Διαβάστε →
             </a>
           </div>
@@ -98,7 +98,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
     {% if pagination.pages.length > 1 %}
     <nav class="mt-16 flex items-center justify-center gap-2" aria-label="Πλοήγηση σελίδων">
       {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand-700 transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
@@ -114,7 +114,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
           {{ pageIndex + 1 }}
         </span>
         {% else %}
-        <a href="{{ pagination.hrefs[pageIndex] }}" class="w-10 h-10 flex items-center justify-center text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+        <a href="{{ pagination.hrefs[pageIndex] }}" class="w-10 h-10 flex items-center justify-center text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand-700 transition-colors">
           {{ pageIndex + 1 }}
         </a>
         {% endif %}
@@ -122,7 +122,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pag
       </div>
 
       {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand transition-colors">
+      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-brand-700 transition-colors">
         Επόμενη
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

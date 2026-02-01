@@ -42,32 +42,32 @@ faq:
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">Skroutz</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">Skroutz</div>
         <h3 class="font-bold text-slate-900">XML Feed & Analytics</h3>
         <p class="text-slate-600 text-sm mt-2">Product feed με validated XML. Skroutz Analytics integration. Smart Cart για one-click checkout.</p>
       </div>
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">BestPrice</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">BestPrice</div>
         <h3 class="font-bold text-slate-900">Price Comparison</h3>
         <p class="text-slate-600 text-sm mt-2">XML feed σε format BestPrice. Automatic daily updates. Category mapping.</p>
       </div>
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">Softone</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">Softone</div>
         <h3 class="font-bold text-slate-900">ERP Sync</h3>
         <p class="text-slate-600 text-sm mt-2">Real-time sync με Softone ERP. Products, stock levels, orders, customers. Bi-directional.</p>
       </div>
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">Entersoft</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">Entersoft</div>
         <h3 class="font-bold text-slate-900">Business Suite</h3>
         <p class="text-slate-600 text-sm mt-2">Integration με Entersoft CRM/ERP. Order flow automation. Inventory management.</p>
       </div>
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">SAP B1</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">SAP B1</div>
         <h3 class="font-bold text-slate-900">Enterprise ERP</h3>
         <p class="text-slate-600 text-sm mt-2">SAP Business One connector. Complex pricing rules. Multi-warehouse support.</p>
       </div>
       <div class="card">
-        <div class="text-2xl font-bold text-brand mb-2">API</div>
+        <div class="text-2xl font-bold text-brand-700 mb-2">API</div>
         <h3 class="font-bold text-slate-900">Custom Integration</h3>
         <p class="text-slate-600 text-sm mt-2">REST/GraphQL APIs για custom systems. Webhook support. Documentation included.</p>
       </div>
@@ -86,19 +86,19 @@ faq:
         <h3 class="font-bold text-lg mb-4 text-slate-900">Checkout Optimization</h3>
         <ul class="space-y-3">
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">One-page checkout (μείωση steps = μείωση abandonment)</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Guest checkout option (no forced registration)</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Progress indicator (ο χρήστης ξέρει πού βρίσκεται)</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Trust badges & security seals</span>
           </li>
         </ul>
@@ -107,19 +107,19 @@ faq:
         <h3 class="font-bold text-lg mb-4 text-slate-900">Revenue Recovery</h3>
         <ul class="space-y-3">
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Abandoned cart email sequences (3-email series)</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Exit-intent popups με offer</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Cart upsells & cross-sells</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-brand shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span class="text-slate-600">Post-purchase follow-up emails</span>
           </li>
         </ul>

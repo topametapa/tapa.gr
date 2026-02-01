@@ -10,12 +10,12 @@ layout: base.njk
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="/" itemprop="item" class="hover:text-brand transition-colors"><span itemprop="name">Αρχική</span></a>
+              <a href="/" itemprop="item" class="hover:text-brand-700 transition-colors"><span itemprop="name">Αρχική</span></a>
               <meta itemprop="position" content="1">
             </li>
             <li aria-hidden="true">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="/blog/" itemprop="item" class="hover:text-brand transition-colors"><span itemprop="name">Blog</span></a>
+              <a href="/blog/" itemprop="item" class="hover:text-brand-700 transition-colors"><span itemprop="name">Blog</span></a>
               <meta itemprop="position" content="2">
             </li>
             <li aria-hidden="true">/</li>
@@ -28,7 +28,7 @@ layout: base.njk
 
         <div class="flex flex-wrap items-center gap-3 mb-4">
           {% if category %}
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand/10 text-brand">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand/10 text-brand-700">
             {{ category }}
           </span>
           {% endif %}
@@ -64,7 +64,7 @@ layout: base.njk
   <section class="section">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
-        <div class="prose prose-lg prose-slate prose-headings:text-slate-900 prose-a:text-brand prose-a:no-underline hover:prose-a:underline" itemprop="articleBody">
+        <div class="prose prose-lg prose-slate prose-headings:text-slate-900 prose-a:text-brand-700 prose-a:no-underline hover:prose-a:underline" itemprop="articleBody">
           {{ content | safe }}
         </div>
 
