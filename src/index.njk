@@ -17,8 +17,9 @@ faq:
 ---
 
 <section class="relative min-h-[85vh] flex items-center overflow-hidden">
-  {# Hero Background Image - LCP optimized with WebP #}
+  {# Hero Background Image - LCP optimized: AVIF → WebP → JPG #}
   <picture>
+    <source srcset="/assets/hero-bg.avif" type="image/avif">
     <source srcset="/assets/hero-bg.webp" type="image/webp">
     <img
       src="/assets/hero-bg.jpg"
