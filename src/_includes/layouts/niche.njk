@@ -65,7 +65,7 @@ layout: base.njk
       <div>
         <h2 class="section-title">Χαρακτηριστικά για {{ niche.name if niche else nicheTitle }}</h2>
         <p class="text-slate-600 mt-4 text-lg">
-          {{ nicheIntro | default("Εξειδικευμένες λύσεις για τον κλάδο σας.") }}
+          {{ niche.features_intro if niche and niche.features_intro else (nicheIntro | default("Εξειδικευμένες λύσεις για τον κλάδο σας.")) }}
         </p>
         <ul class="mt-8 space-y-4">
           {% set featuresList = niche.features if niche else nicheFeatures %}
@@ -125,7 +125,7 @@ layout: base.njk
           <svg class="w-6 h-6 text-brand-700 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
           </svg>
-          <span class="text-slate-700">{{ point }}</span>
+          <span class="text-slate-700">{{ point | safe }}</span>
         </li>
         {% endfor %}
       </ul>
