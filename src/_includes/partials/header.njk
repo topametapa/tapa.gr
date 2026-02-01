@@ -5,12 +5,42 @@
         tapa<span class="text-brand-700">.gr</span>
       </a>
       <div class="hidden lg:flex lg:items-center lg:gap-8">
-        <a href="/dimiourgia-istoselidon/" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors" aria-label="Υπηρεσία δημιουργίας ιστοσελίδων">
-          Δημιουργία Ιστοσελίδων
-        </a>
-        <a href="/kataskevi-eshop/" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors" aria-label="Υπηρεσία κατασκευής eshop">
-          Κατασκευή Eshop
-        </a>
+        {# Υπηρεσίες Dropdown #}
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors" aria-haspopup="true">
+            Υπηρεσίες
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-slate-200 py-2 w-64">
+              <a href="/istoselides/" class="block px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50 hover:text-brand-700">
+                Όλες οι Ιστοσελίδες →
+              </a>
+              <div class="border-t border-slate-100 my-2"></div>
+              <a href="/istoselides/estiatoria/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Εστιατόρια & Καφέ
+              </a>
+              <a href="/istoselides/iatroi/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Ιατροί & Κλινικές
+              </a>
+              <a href="/istoselides/dikigoroi/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Δικηγόροι & Νομικά
+              </a>
+              <a href="/istoselides/xenodocheia/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Ξενοδοχεία & Καταλύματα
+              </a>
+              <a href="/istoselides/gymnastiria/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Γυμναστήρια & Fitness
+              </a>
+              <div class="border-t border-slate-100 my-2"></div>
+              <a href="/kataskevi-eshop/" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-brand-700">
+                Κατασκευή Eshop
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="/blog/" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors" aria-label="Διαβάστε το blog μας">
           Blog
         </a>
@@ -34,21 +64,39 @@
         </svg>
       </button>
     </div>
+    {# Mobile Menu #}
     <div id="mobile-menu" class="hidden lg:hidden pb-4 bg-white/95 -mx-4 px-4 border-t border-slate-100" role="menu">
       <div class="flex flex-col space-y-1 pt-4">
-        <a href="/dimiourgia-istoselidon/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors" aria-label="Υπηρεσία δημιουργίας ιστοσελίδων">
-          Δημιουργία Ιστοσελίδων
+        <div class="px-3 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">Υπηρεσίες</div>
+        <a href="/istoselides/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-900 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Όλες οι Ιστοσελίδες
         </a>
-        <a href="/kataskevi-eshop/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors" aria-label="Υπηρεσία κατασκευής eshop">
+        <a href="/istoselides/estiatoria/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Εστιατόρια & Καφέ
+        </a>
+        <a href="/istoselides/iatroi/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Ιατροί & Κλινικές
+        </a>
+        <a href="/istoselides/dikigoroi/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Δικηγόροι & Νομικά
+        </a>
+        <a href="/istoselides/xenodocheia/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Ξενοδοχεία & Καταλύματα
+        </a>
+        <a href="/istoselides/gymnastiria/" role="menuitem" class="block px-6 py-2 text-sm text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
+          Γυμναστήρια & Fitness
+        </a>
+        <a href="/kataskevi-eshop/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
           Κατασκευή Eshop
         </a>
-        <a href="/blog/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors" aria-label="Διαβάστε το blog μας">
+        <div class="border-t border-slate-100 my-2"></div>
+        <a href="/blog/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
           Blog
         </a>
-        <a href="/portfolio/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors" aria-label="Δείτε το portfolio μας">
+        <a href="/portfolio/" role="menuitem" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition-colors">
           Portfolio
         </a>
-        <a href="/epikoinonia/" role="menuitem" class="block px-3 py-2.5 mt-2 text-base font-semibold text-center text-slate-900 bg-brand hover:bg-brand-400 rounded-lg transition-colors" aria-label="Επικοινωνήστε μαζί μας">
+        <a href="/epikoinonia/" role="menuitem" class="block px-3 py-2.5 mt-2 text-base font-semibold text-center text-slate-900 bg-brand hover:bg-brand-400 rounded-lg transition-colors">
           Επικοινωνία
         </a>
       </div>

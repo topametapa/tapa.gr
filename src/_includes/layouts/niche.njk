@@ -1,0 +1,165 @@
+---
+layout: base.njk
+---
+
+<section class="section bg-slate-50 border-b border-slate-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      {# Breadcrumb with Schema #}
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center justify-center gap-2 text-sm text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item" class="hover:text-brand-700 transition-colors"><span itemprop="name">Αρχική</span></a>
+            <meta itemprop="position" content="1">
+          </li>
+          <li aria-hidden="true">/</li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/istoselides/" itemprop="item" class="hover:text-brand-700 transition-colors"><span itemprop="name">Ιστοσελίδες</span></a>
+            <meta itemprop="position" content="2">
+          </li>
+          <li aria-hidden="true">/</li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name" class="text-slate-900 font-medium">{{ nicheTitle }}</span>
+            <meta itemprop="position" content="3">
+          </li>
+        </ol>
+      </nav>
+
+      <span class="text-brand-700 font-semibold text-sm uppercase tracking-wide">{{ nicheLabel | default("Εξειδικευμένη Λύση") }}</span>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mt-4">
+        Κατασκευή Ιστοσελίδων για {{ nicheTitle }}
+      </h1>
+      <p class="section-subtitle mx-auto text-center">
+        {{ nicheDescription }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="section-title">Χαρακτηριστικά για {{ nicheTitle }}</h2>
+        <p class="text-slate-600 mt-4 text-lg">
+          {{ nicheIntro }}
+        </p>
+        <ul class="mt-8 space-y-4">
+          {% for feature in nicheFeatures %}
+          <li class="flex items-start gap-4">
+            <svg class="w-6 h-6 text-brand-700 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <strong class="text-slate-900">{{ feature.title }}</strong>
+              <p class="text-slate-600 text-sm mt-1">{{ feature.description }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="/epikoinonia/" class="btn btn-primary mt-8">
+          Ζητήστε Προσφορά →
+        </a>
+      </div>
+      <div class="card p-8 lg:p-12">
+        <h3 class="text-xl font-bold text-slate-900 mb-6">Τι Περιλαμβάνει;</h3>
+        <ul class="space-y-4">
+          {% for item in nicheIncludes %}
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-brand-700 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-slate-600">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="border-t border-slate-200 my-6"></div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-brand-700">100/100</div>
+          <div class="text-slate-500 mt-1 text-sm">PageSpeed Score</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Additional Content from page #}
+{{ content | safe }}
+
+<section class="section section-alt">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="section-title">Γιατί να Επιλέξετε Εμάς;</h2>
+      <p class="text-slate-600 mt-4">Η εξειδίκευσή μας στον κλάδο σας κάνει τη διαφορά.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-slate-900 mt-4">Ταχύτητα</h3>
+        <p class="text-slate-600 text-sm mt-2">Load time &lt;1 δευτερόλεπτο, 100/100 PageSpeed.</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-slate-900 mt-4">SEO</h3>
+        <p class="text-slate-600 text-sm mt-2">Τοπικό SEO και στοχευμένες λέξεις-κλειδιά.</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-slate-900 mt-4">Ασφάλεια</h3>
+        <p class="text-slate-600 text-sm mt-2">SSL, security headers, GDPR compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-slate-500 mb-4">
+      <a href="/istoselides/" class="hover:text-brand-700 transition-colors">← Δείτε όλους τους κλάδους</a>
+    </p>
+  </div>
+</section>
+
+<section class="section bg-brand">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Έτοιμοι για το Νέο σας Site;</h2>
+    <p class="text-xl text-slate-800 mt-4 max-w-xl mx-auto">
+      Στείλτε μας το project σας και λαμβάνετε δωρεάν πρόταση εντός 24 ωρών.
+    </p>
+    <a href="/epikoinonia/" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors mt-8 shadow-lg">
+      Δωρεάν Πρόταση →
+    </a>
+  </div>
+</section>
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Κατασκευή Ιστοσελίδων για {{ nicheTitle }}",
+  "description": "{{ description }}",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://tapa.gr/#organization"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ελλάδα"
+  },
+  "serviceType": "Web Development"
+}
+</script>
+{% endblock %}
