@@ -184,24 +184,22 @@ layout: base.njk
 </section>
 {% endif %}
 
-{# Case Study Teaser - Premium Dark Theme #}
+{# Case Study Teaser - Premium Dark Theme Full Width #}
 {% if niche and niche.case_study %}
-<section class="section">
+<section class="bg-slate-900 py-16 lg:py-24">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-5xl mx-auto">
-      {# Premium Dark Wrapper #}
-      <div class="bg-slate-900 rounded-3xl p-8 lg:p-12">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {# Image side with laptop shadow effect #}
-          <div class="relative">
-            <div class="aspect-video rounded-xl overflow-hidden drop-shadow-2xl bg-slate-800">
-              <img
-                src="{{ niche.case_study.image }}"
-                alt="{{ niche.case_study.client_name }} - Case Study"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              >
-            </div>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {# Image side - no background, floating mockup #}
+        <div class="relative">
+          <div class="drop-shadow-2xl">
+            <img
+              src="{{ niche.case_study.image }}"
+              alt="{{ niche.case_study.client_name }} - Case Study"
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            >
+          </div>
             {# Floating badges #}
             <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-white/10 text-white rounded-full shadow-md backdrop-blur-sm">
               Case Study
@@ -242,27 +240,26 @@ layout: base.njk
           </div>
         </div>
 
-        {# Premium Testimonial block - inside dark wrapper #}
-        {% if niche.testimonial %}
-        <div class="mt-10 bg-white/5 border-l-4 border-brand-700 rounded-r-lg p-6 flex items-start gap-6">
-          {% if niche.testimonial.client_logo %}
-          <div class="flex-shrink-0 hidden sm:block">
-            <img
-              src="{{ niche.testimonial.client_logo }}"
-              alt="{{ niche.case_study.client_name }} logo"
-              class="w-16 h-16 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-            >
-          </div>
-          {% endif %}
-          <div>
-            <blockquote class="text-white italic text-lg">
-              "{{ niche.testimonial.text }}"
-            </blockquote>
-            <p class="mt-3 text-sm font-semibold text-slate-400">— {{ niche.testimonial.author }}</p>
-          </div>
+      {# Premium Testimonial block #}
+      {% if niche.testimonial %}
+      <div class="mt-12 bg-white/5 border-l-4 border-brand-700 rounded-r-lg p-6 flex items-start gap-6">
+        {% if niche.testimonial.client_logo %}
+        <div class="flex-shrink-0 hidden sm:block">
+          <img
+            src="{{ niche.testimonial.client_logo }}"
+            alt="{{ niche.case_study.client_name }} logo"
+            class="w-16 h-16 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          >
         </div>
         {% endif %}
+        <div>
+          <blockquote class="text-white italic text-lg">
+            "{{ niche.testimonial.text }}"
+          </blockquote>
+          <p class="mt-3 text-sm font-semibold text-slate-400">— {{ niche.testimonial.author }}</p>
+        </div>
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
