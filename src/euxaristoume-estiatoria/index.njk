@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Ευχαριστούμε | Tapa.gr
+description: Λάβαμε το αίτημά σας για ιστοσελίδα εστιατορίου. Θα επικοινωνήσουμε μαζί σας εντός 24 ωρών.
+robots: noindex, nofollow
+---
+
+<section class="section min-h-[60vh] flex items-center">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="w-20 h-20 bg-brand/20 rounded-full flex items-center justify-center mx-auto mb-8">
+        <svg class="w-10 h-10 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">
+        Ευχαριστούμε για το ενδιαφέρον σας!
+      </h1>
+      <p class="text-lg text-slate-600 mt-6">
+        Λάβαμε το αίτημά σας για κατασκευή ιστοσελίδας εστιατορίου.
+        Θα επικοινωνήσουμε μαζί σας <strong>εντός 24 ωρών</strong> με μια εξατομικευμένη πρόταση.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="btn btn-primary">
+          Επιστροφή στην Αρχική
+        </a>
+        <a href="/istoselides/estiatoria/" class="btn btn-secondary">
+          Δείτε τα χαρακτηριστικά
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% block head %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
