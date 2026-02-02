@@ -166,80 +166,85 @@ layout: base.njk
 </section>
 {% endif %}
 
-{# Case Study Teaser - only renders if niche.case_study exists #}
+{# Case Study Teaser - Premium Dark Theme #}
 {% if niche and niche.case_study %}
 <section class="section">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        {# Image side #}
-        <div class="relative">
-          <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-slate-100">
+      {# Premium Dark Wrapper #}
+      <div class="bg-slate-900 rounded-3xl p-8 lg:p-12">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {# Image side with laptop shadow effect #}
+          <div class="relative">
+            <div class="aspect-video rounded-xl overflow-hidden drop-shadow-2xl bg-slate-800">
+              <img
+                src="{{ niche.case_study.image }}"
+                alt="{{ niche.case_study.client_name }} - Case Study"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+            </div>
+            {# Floating badges #}
+            <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-white/10 text-white rounded-full shadow-md backdrop-blur-sm">
+              Case Study
+            </span>
+            {% if niche.case_study.speed_badge %}
+            <span class="absolute bottom-4 left-4 px-3 py-1.5 text-xs font-bold bg-brand-700 text-white rounded-full shadow-lg">
+              {{ niche.case_study.speed_badge }}
+            </span>
+            {% endif %}
+          </div>
+          {# Content side - white text on dark #}
+          <div>
+            <p class="text-sm text-slate-400 mb-2">{{ niche.case_study.client_name }}</p>
+            <p class="text-2xl font-bold text-white mb-3">{{ niche.case_study.teaser_title }}</p>
+            {% if niche.case_study.teaser_description %}
+            <p class="text-slate-300 mb-6">{{ niche.case_study.teaser_description }}</p>
+            {% endif %}
+            {# Metrics pills - adapted for dark bg #}
+            <div class="flex flex-wrap gap-3 mb-8">
+              {% for metric in niche.case_study.metrics %}
+              <span class="px-4 py-2 text-sm font-medium text-white border border-slate-600 rounded-full bg-white/5">
+                {{ metric }}
+              </span>
+              {% endfor %}
+            </div>
+            {# CTA Buttons with gap-4 #}
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="/portfolio/{{ niche.case_study.slug }}/"
+                class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold rounded-xl bg-brand-700 text-white hover:bg-brand-600 transition-colors shadow-lg"
+              >
+                Διαβάστε την πλήρη ανάλυση
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {# Premium Testimonial block - inside dark wrapper #}
+        {% if niche.testimonial %}
+        <div class="mt-10 bg-white/5 border-l-4 border-brand-700 rounded-r-lg p-6 flex items-start gap-6">
+          {% if niche.testimonial.client_logo %}
+          <div class="flex-shrink-0 hidden sm:block">
             <img
-              src="{{ niche.case_study.image }}"
-              alt="{{ niche.case_study.client_name }} - Case Study"
-              class="w-full h-full object-cover"
-              loading="lazy"
+              src="{{ niche.testimonial.client_logo }}"
+              alt="{{ niche.case_study.client_name }} logo"
+              class="w-16 h-16 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
           </div>
-          {# Floating badges #}
-          <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-brand-700 text-white rounded-full shadow-md">
-            Case Study
-          </span>
-          {% if niche.case_study.speed_badge %}
-          <span class="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-white text-slate-900 rounded-full shadow-md border border-slate-200">
-            {{ niche.case_study.speed_badge }}
-          </span>
           {% endif %}
-        </div>
-        {# Content side #}
-        <div>
-          <p class="text-sm text-slate-500 mb-2">{{ niche.case_study.client_name }}</p>
-          <p class="text-2xl font-bold text-slate-900 mb-3">{{ niche.case_study.teaser_title }}</p>
-          {% if niche.case_study.teaser_description %}
-          <p class="text-slate-600 mb-6">{{ niche.case_study.teaser_description }}</p>
-          {% endif %}
-          {# Metrics pills #}
-          <div class="flex flex-wrap gap-3 mb-8">
-            {% for metric in niche.case_study.metrics %}
-            <span class="px-4 py-2 text-sm font-medium text-slate-700 border-2 border-brand-600 rounded-full bg-brand/5">
-              {{ metric }}
-            </span>
-            {% endfor %}
+          <div>
+            <blockquote class="text-white italic text-lg">
+              "{{ niche.testimonial.text }}"
+            </blockquote>
+            <p class="mt-3 text-sm font-semibold text-slate-400">— {{ niche.testimonial.author }}</p>
           </div>
-          <a
-            href="/portfolio/{{ niche.case_study.slug }}/"
-            class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-lg"
-          >
-            Διαβάστε την πλήρη ανάλυση
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      {# Testimonial block #}
-      {% if niche.testimonial %}
-      <div class="mt-12 bg-slate-50 border-l-4 border-brand-700 rounded-r-lg p-6 flex items-start gap-6">
-        {% if niche.testimonial.client_logo %}
-        <div class="flex-shrink-0 hidden sm:block">
-          <img
-            src="{{ niche.testimonial.client_logo }}"
-            alt="{{ niche.case_study.client_name }} logo"
-            class="w-16 h-16 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-          >
         </div>
         {% endif %}
-        <div>
-          <blockquote class="text-slate-700 italic">
-            "{{ niche.testimonial.text }}"
-          </blockquote>
-          <p class="mt-3 text-sm font-semibold text-slate-900">— {{ niche.testimonial.author }}</p>
-        </div>
       </div>
-      {% endif %}
-
     </div>
   </div>
 </section>
