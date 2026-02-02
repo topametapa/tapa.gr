@@ -316,6 +316,11 @@
       "jpg": "/assets/rent-car-bg.jpg"
     },
     "hero_sub_headline": "Πλήρης σύνδεση με QuickDrive & Local SEO για κορυφή στις αναζητήσεις",
+    "hero_highlight": "Rent a Car",
+    "trust_tags": [
+      "Χωρίς προμήθειες",
+      "14 ημέρες δωρεάν δοκιμή"
+    ],
     "features_intro": "Σχεδιασμένα για να μετατρέπουν τουρίστες σε κρατήσεις με καθαρό booking flow.",
     "features": [
       "Πολλαπλές γλώσσες",

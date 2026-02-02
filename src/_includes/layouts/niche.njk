@@ -46,8 +46,8 @@ layout: base.njk
       aria-hidden="true"
     >
   </picture>
-  {# Dark Overlay for text contrast #}
-  <div class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+  {# Advanced Gradient Overlay - dramatic left, breathable right #}
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" aria-hidden="true"></div>
   {% endif %}
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 {% if niche and niche.hero_bg %}relative z-10 py-16{% endif %}">
@@ -69,17 +69,35 @@ layout: base.njk
         </ol>
       </nav>
 
-      <span class="{% if niche and niche.hero_bg %}text-brand{% else %}text-brand-700{% endif %} font-semibold text-sm uppercase tracking-wide">{{ nicheLabel | default("Εξειδικευμένη Λύση") }}</span>
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight {% if niche and niche.hero_bg %}text-white{% else %}text-slate-900{% endif %} mt-4">
-        {{ niche.h1_title if niche else ("Κατασκευή Ιστοσελίδων για " ~ nicheTitle) }}
+      <span class="{% if niche and niche.hero_bg %}text-brand drop-shadow-md{% else %}text-brand-700{% endif %} font-semibold text-sm uppercase tracking-wide">{{ nicheLabel | default("Εξειδικευμένη Λύση") }}</span>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight {% if niche and niche.hero_bg %}text-white drop-shadow-lg{% else %}text-slate-900{% endif %} mt-4">
+        {% if niche and niche.hero_highlight %}
+          {{ niche.h1_title | replace(niche.hero_highlight, '<span class="text-brand-700">' ~ niche.hero_highlight ~ '</span>') | safe }}
+        {% else %}
+          {{ niche.h1_title if niche else ("Κατασκευή Ιστοσελίδων για " ~ nicheTitle) }}
+        {% endif %}
       </h1>
-      <p class="section-subtitle mx-auto text-center {% if niche and niche.hero_bg %}text-slate-200{% endif %}">
+      <p class="section-subtitle mx-auto text-center {% if niche and niche.hero_bg %}text-slate-200 drop-shadow-md{% endif %}">
         {{ niche.hero_subtitle if niche else nicheDescription }}
       </p>
       {% if niche and niche.hero_sub_headline %}
-      <p class="text-brand font-medium mt-4">
+      <p class="text-brand font-medium mt-4 drop-shadow-sm">
         {{ niche.hero_sub_headline }}
       </p>
+      {% endif %}
+
+      {# Trust Tags - only for niches with hero_bg #}
+      {% if niche and niche.hero_bg and niche.trust_tags %}
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        {% for tag in niche.trust_tags %}
+        <span class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/10 rounded-full backdrop-blur-sm">
+          <svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          {{ tag }}
+        </span>
+        {% endfor %}
+      </div>
       {% endif %}
     </div>
   </div>
