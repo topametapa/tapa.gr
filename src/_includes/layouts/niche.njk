@@ -408,29 +408,75 @@ layout: base.njk
   </div>
 </section>
 
-{# Sticky CTA for niches with forms #}
+{# Sticky CTA for niches with forms - with scroll progress animation #}
 {% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car" or niche.slug == "xenodocheia" or niche.slug == "fotografoi" or niche.slug == "gymnastiria" or niche.slug == "dikigoroi" or niche.slug == "estiatoria" or niche.slug == "syllogoi") %}
 <div class="fixed bottom-6 right-6 z-40 hidden sm:block">
   <a
     href="#protasi-form"
-    class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl"
+    id="scroll-cta-btn"
+    class="relative inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-slate-900 text-white transition-all shadow-xl hover:shadow-2xl overflow-hidden"
     aria-label="Μετάβαση στη φόρμα πρότασης"
+    style="border: 2px solid transparent;"
   >
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-    </svg>
-    Ζητήστε Πρόταση
+    {# Progress border overlay #}
+    <span id="scroll-progress-border" class="absolute inset-0 rounded-full pointer-events-none" style="background: conic-gradient(#ea580c 0%, transparent 0%); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));"></span>
+    {# Button content #}
+    <span class="relative z-10 flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+      Ζητήστε Πρόταση
+    </span>
   </a>
 </div>
 <div class="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white border-t border-slate-200 p-3">
   <a
     href="#protasi-form"
-    class="block w-full text-center px-6 py-3 text-base font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors"
+    id="scroll-cta-btn-mobile"
+    class="block w-full text-center px-6 py-3 text-base font-semibold rounded-xl bg-slate-900 text-white transition-all"
     aria-label="Μετάβαση στη φόρμα πρότασης"
   >
     Ζητήστε Πρόταση
   </a>
 </div>
+<script>
+(function() {
+  const btn = document.getElementById('scroll-cta-btn');
+  const btnMobile = document.getElementById('scroll-cta-btn-mobile');
+  const progressBorder = document.getElementById('scroll-progress-border');
+
+  if (!btn || !progressBorder) return;
+
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = Math.min((scrollTop / docHeight) * 100, 100);
+
+    // Update conic gradient for border progress
+    progressBorder.style.background = `conic-gradient(#ea580c ${scrollPercent}%, transparent ${scrollPercent}%)`;
+
+    // When fully scrolled, change button to orange
+    if (scrollPercent >= 95) {
+      btn.classList.remove('bg-slate-900');
+      btn.classList.add('bg-brand-700', 'hover:bg-brand-600');
+      if (btnMobile) {
+        btnMobile.classList.remove('bg-slate-900');
+        btnMobile.classList.add('bg-brand-700', 'hover:bg-brand-600');
+      }
+    } else {
+      btn.classList.add('bg-slate-900');
+      btn.classList.remove('bg-brand-700', 'hover:bg-brand-600');
+      if (btnMobile) {
+        btnMobile.classList.add('bg-slate-900');
+        btnMobile.classList.remove('bg-brand-700', 'hover:bg-brand-600');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress(); // Initial call
+})();
+</script>
 {% endif %}
 
 {% block head %}
