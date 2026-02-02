@@ -1,0 +1,222 @@
+---
+layout: base.njk
+---
+
+{# Set canonical URL #}
+{% set canonicalUrl = site.url ~ page.url %}
+
+{# Hero Section #}
+<section class="section bg-slate-50 border-b border-slate-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      {# Breadcrumb #}
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li>
+            <a href="/" class="hover:text-brand-700 transition-colors">Αρχική</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/portfolio/" class="hover:text-brand-700 transition-colors">Portfolio</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <span class="text-slate-900 font-medium">{{ client_name }}</span>
+          </li>
+        </ol>
+      </nav>
+
+      {# Case Study badge #}
+      <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-brand-700 text-white rounded-full mb-4">
+        Case Study
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
+        {{ client_name }}
+      </h1>
+      <p class="text-xl text-slate-600 mt-4">
+        {{ niche_label | default("Ιστοσελίδα για " ~ niche_name) }}
+      </p>
+    </div>
+  </div>
+</section>
+
+{# Hero Image #}
+{% if hero_image %}
+<section class="py-8 bg-slate-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="aspect-video rounded-xl overflow-hidden shadow-2xl bg-slate-200">
+        <img
+          src="{{ hero_image }}"
+          alt="{{ client_name }} - Screenshot"
+          class="w-full h-full object-cover"
+          loading="eager"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Challenge Section #}
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-brand-700 font-semibold text-sm uppercase tracking-wide mb-2">Η Πρόκληση</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{{ challenge_title | default("Τι δεν δούλευε;") }}</h2>
+      <div class="prose prose-slate prose-lg max-w-none">
+        {{ challenge | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Solution Section #}
+<section class="section bg-slate-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-brand-700 font-semibold text-sm uppercase tracking-wide mb-2">Η Λύση</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{{ solution_title | default("Τι χτίσαμε;") }}</h2>
+      <div class="prose prose-slate prose-lg max-w-none">
+        {{ solution | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Results Section #}
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-700 font-semibold text-sm uppercase tracking-wide mb-2">Το Αποτέλεσμα</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-12">{{ results_title | default("Μετρήσιμα αποτελέσματα") }}</h2>
+
+      {% if results %}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-{{ results | length if results | length <= 4 else 4 }} gap-8">
+        {% for result in results %}
+        <div class="card p-6 text-center">
+          <div class="text-4xl sm:text-5xl font-bold text-brand-700">{{ result.value }}</div>
+          <p class="text-slate-600 mt-2">{{ result.label }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{# Gallery Section (optional) #}
+{% if gallery and gallery | length > 0 %}
+<section class="section bg-slate-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">Screenshots</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {% for image in gallery %}
+        <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-slate-200">
+          <img
+            src="{{ image.src }}"
+            alt="{{ image.alt | default(client_name ~ ' screenshot') }}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Additional Content #}
+{% if content | trim %}
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto prose prose-slate prose-headings:font-bold prose-a:text-brand-700">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Final CTA #}
+<section class="section bg-brand">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
+      Θέλετε παρόμοια αποτελέσματα για τη δική σας επιχείρηση;
+    </h2>
+    <p class="text-lg text-slate-800 mt-4 max-w-xl mx-auto">
+      Στείλτε μας το project σας και λαμβάνετε δωρεάν πρόταση εντός 24 ωρών.
+    </p>
+    <a
+      href="/istoselides/{{ niche_slug }}/#protasi-form"
+      class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors mt-8 shadow-lg"
+    >
+      Ζητήστε πρόταση →
+    </a>
+  </div>
+</section>
+
+{# Back Link #}
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <a href="/istoselides/{{ niche_slug }}/" class="text-slate-500 hover:text-brand-700 transition-colors">
+      ← Επιστροφή στη λύση για {{ niche_name }}
+    </a>
+  </div>
+</section>
+
+{% block head %}
+{# WebPage Schema #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ canonicalUrl }}#article",
+  "headline": "{{ client_name }} – Case Study",
+  "description": "{{ description }}",
+  "image": "{{ site.url }}{{ hero_image }}",
+  "author": {
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization"
+  },
+  "mainEntityOfPage": {
+    "@id": "{{ canonicalUrl }}"
+  }
+}
+</script>
+
+{# BreadcrumbList Schema #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "{{ canonicalUrl }}#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Αρχική",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Portfolio",
+      "item": "{{ site.url }}/portfolio/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ client_name }}",
+      "item": "{{ canonicalUrl }}"
+    }
+  ]
+}
+</script>
+{% endblock %}

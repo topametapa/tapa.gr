@@ -140,6 +140,55 @@ layout: base.njk
 </section>
 {% endif %}
 
+{# Case Study Teaser - only renders if niche.case_study exists #}
+{% if niche and niche.case_study %}
+<section class="section">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {# Image side #}
+        <div class="relative">
+          <div class="aspect-video rounded-lg overflow-hidden shadow-lg bg-slate-100">
+            <img
+              src="{{ niche.case_study.image }}"
+              alt="{{ niche.case_study.client_name }} - Case Study"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+          </div>
+          {# Floating badge #}
+          <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-brand-700 text-white rounded-full shadow-md">
+            Case Study
+          </span>
+        </div>
+        {# Content side #}
+        <div>
+          <p class="text-sm text-slate-500 mb-2">{{ niche.case_study.client_name }}</p>
+          <p class="text-2xl font-bold text-slate-900 mb-6">{{ niche.case_study.teaser_title }}</p>
+          {# Metrics pills #}
+          <div class="flex flex-wrap gap-3 mb-8">
+            {% for metric in niche.case_study.metrics %}
+            <span class="px-4 py-2 text-sm font-medium text-slate-700 border-2 border-brand-600 rounded-full bg-brand/5">
+              {{ metric }}
+            </span>
+            {% endfor %}
+          </div>
+          <a
+            href="/portfolio/{{ niche.case_study.slug }}/"
+            class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-lg"
+          >
+            Διαβάστε την πλήρη ανάλυση
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {# Additional Content from page #}
 {% if content | trim %}
 <section class="section">

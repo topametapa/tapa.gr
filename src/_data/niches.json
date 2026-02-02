@@ -349,7 +349,18 @@
         "q": "Πόσος χρόνος χρειάζεται για να ολοκληρωθεί η ιστοσελίδα;",
         "a": "Συνήθως 15–25 εργάσιμες, ανάλογα με τις γλώσσες και τον αριθμό landing pages."
       }
-    ]
+    ],
+    "case_study": {
+      "client_name": "Mykonos Car Rental",
+      "teaser_title": "Πώς πετύχαμε +40% αύξηση κρατήσεων στη Μύκονο",
+      "metrics": [
+        "PageSpeed: 100/100",
+        "Mobile Conversions: +40%",
+        "Zero Overbookings"
+      ],
+      "image": "/assets/images/portfolio/mykonos-car-rental-teaser.webp",
+      "slug": "mykonos-car-rental"
+    }
   },
   {
     "slug": "syllogoi",
