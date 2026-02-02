@@ -164,7 +164,10 @@ layout: base.njk
         {# Content side #}
         <div>
           <p class="text-sm text-slate-500 mb-2">{{ niche.case_study.client_name }}</p>
-          <p class="text-2xl font-bold text-slate-900 mb-6">{{ niche.case_study.teaser_title }}</p>
+          <p class="text-2xl font-bold text-slate-900 mb-3">{{ niche.case_study.teaser_title }}</p>
+          {% if niche.case_study.teaser_description %}
+          <p class="text-slate-600 mb-6">{{ niche.case_study.teaser_description }}</p>
+          {% endif %}
           {# Metrics pills #}
           <div class="flex flex-wrap gap-3 mb-8">
             {% for metric in niche.case_study.metrics %}
