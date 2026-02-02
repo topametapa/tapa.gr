@@ -412,7 +412,7 @@ layout: base.njk
 {% if niche and (niche.slug == "iatroi" or niche.slug == "rent-a-car" or niche.slug == "xenodocheia" or niche.slug == "fotografoi" or niche.slug == "gymnastiria" or niche.slug == "dikigoroi" or niche.slug == "estiatoria" or niche.slug == "syllogoi") %}
 <div class="fixed bottom-6 right-6 z-40 hidden sm:block">
   {# Outer wrapper - 2px border ring with scroll progress #}
-  <div id="scroll-progress-ring" class="p-[2px] rounded-full shadow-xl" style="background: conic-gradient(from -90deg, rgb(249 115 22) 0%, transparent 0%);">
+  <div id="scroll-progress-ring" class="p-[2px] rounded-full shadow-xl" style="background: conic-gradient(from -90deg, rgb(194 65 12) 0%, rgb(15 23 42) 0%);">
     <a
       href="#protasi-form"
       id="scroll-cta-btn"
@@ -450,7 +450,7 @@ layout: base.njk
     const scrollPercent = Math.min((scrollTop / docHeight) * 100, 100);
 
     // Update conic gradient for 2px border ring (starts from top: -90deg)
-    progressRing.style.background = `conic-gradient(from -90deg, rgb(249 115 22) ${scrollPercent}%, transparent ${scrollPercent}%)`;
+    progressRing.style.background = `conic-gradient(from -90deg, rgb(194 65 12) ${scrollPercent}%, rgb(15 23 42) ${scrollPercent}%)`;
 
     // When fully scrolled, change button to orange
     if (scrollPercent >= 95) {
