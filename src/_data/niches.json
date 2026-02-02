@@ -315,6 +315,7 @@
       "webp": "/assets/rent-car-bg.webp",
       "jpg": "/assets/rent-car-bg.jpg"
     },
+    "hero_sub_headline": "Πλήρης σύνδεση με QuickDrive & Local SEO για κορυφή στις αναζητήσεις",
     "features_intro": "Σχεδιασμένα για να μετατρέπουν τουρίστες σε κρατήσεις με καθαρό booking flow.",
     "features": [
       "Πολλαπλές γλώσσες",
@@ -355,6 +356,11 @@
         "a": "Συνήθως 15–25 εργάσιμες, ανάλογα με τις γλώσσες και τον αριθμό landing pages."
       }
     ],
+    "testimonial": {
+      "text": "Από τη στιγμή που ανέβηκε το νέο site, οι κρατήσεις από Google αυξήθηκαν κατά 40%. Το QuickDrive δουλεύει άψογα και δεν έχουμε ξαναδεί overbooking.",
+      "author": "Γιάννης Κ., Ιδιοκτήτης",
+      "client_logo": "/assets/images/portfolio/mykonos-car-rental-logo.svg"
+    },
     "case_study": {
       "client_name": "Mykonos Car Rental",
       "teaser_title": "Πώς πετύχαμε +40% αύξηση κρατήσεων στη Μύκονο",
@@ -365,7 +371,8 @@
         "Zero Overbookings"
       ],
       "image": "/assets/images/portfolio/mykonos-car-rental-teaser.webp",
-      "slug": "mykonos-car-rental"
+      "slug": "mykonos-car-rental",
+      "speed_badge": "100/100 Speed"
     }
   },
   {

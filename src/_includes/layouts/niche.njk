@@ -47,7 +47,7 @@ layout: base.njk
     >
   </picture>
   {# Dark Overlay for text contrast #}
-  <div class="absolute inset-0 bg-slate-900/70" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
   {% endif %}
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 {% if niche and niche.hero_bg %}relative z-10 py-16{% endif %}">
@@ -76,6 +76,11 @@ layout: base.njk
       <p class="section-subtitle mx-auto text-center {% if niche and niche.hero_bg %}text-slate-200{% endif %}">
         {{ niche.hero_subtitle if niche else nicheDescription }}
       </p>
+      {% if niche and niche.hero_sub_headline %}
+      <p class="text-brand font-medium mt-4">
+        {{ niche.hero_sub_headline }}
+      </p>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -177,10 +182,15 @@ layout: base.njk
               loading="lazy"
             >
           </div>
-          {# Floating badge #}
+          {# Floating badges #}
           <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-brand-700 text-white rounded-full shadow-md">
             Case Study
           </span>
+          {% if niche.case_study.speed_badge %}
+          <span class="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-white text-slate-900 rounded-full shadow-md border border-slate-200">
+            {{ niche.case_study.speed_badge }}
+          </span>
+          {% endif %}
         </div>
         {# Content side #}
         <div>
@@ -208,6 +218,28 @@ layout: base.njk
           </a>
         </div>
       </div>
+
+      {# Testimonial block #}
+      {% if niche.testimonial %}
+      <div class="mt-12 bg-slate-50 border-l-4 border-brand-700 rounded-r-lg p-6 flex items-start gap-6">
+        {% if niche.testimonial.client_logo %}
+        <div class="flex-shrink-0 hidden sm:block">
+          <img
+            src="{{ niche.testimonial.client_logo }}"
+            alt="{{ niche.case_study.client_name }} logo"
+            class="w-16 h-16 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          >
+        </div>
+        {% endif %}
+        <div>
+          <blockquote class="text-slate-700 italic">
+            "{{ niche.testimonial.text }}"
+          </blockquote>
+          <p class="mt-3 text-sm font-semibold text-slate-900">— {{ niche.testimonial.author }}</p>
+        </div>
+      </div>
+      {% endif %}
+
     </div>
   </div>
 </section>
