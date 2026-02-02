@@ -1,0 +1,87 @@
+{# Contextual contact form for Gyms/Fitness niche #}
+<div class="max-w-lg mx-auto mt-10 bg-white rounded-2xl shadow-xl p-8" id="protasi-form">
+  <h3 class="text-xl font-bold text-slate-900 text-center mb-6">
+    Ζητήστε πρόταση για ιστοσελίδα Γυμναστηρίου
+  </h3>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+    <input type="hidden" name="_subject" value="Νέο αίτημα - Ιστοσελίδα Γυμναστηρίου">
+    <input type="hidden" name="_next" value="https://tapa.gr/euxaristoume-gymnastiria/">
+
+    {# Τύπος γυμναστηρίου #}
+    <div>
+      <label for="typos-gymnastirio" class="block text-sm font-medium text-slate-700 mb-1.5">
+        Τύπος γυμναστηρίου
+      </label>
+      <select
+        id="typos-gymnastirio"
+        name="typos_gymnastirio"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors"
+      >
+        <option value="" disabled selected>Επιλέξτε τύπο</option>
+        <option value="Γυμναστήριο (weights / fitness)">Γυμναστήριο (weights / fitness)</option>
+        <option value="Personal Training Studio">Personal Training Studio</option>
+        <option value="Pilates / Yoga Studio">Pilates / Yoga Studio</option>
+        <option value="CrossFit / Functional Training">CrossFit / Functional Training</option>
+        <option value="Σχολή Χορού">Σχολή Χορού</option>
+        <option value="Άλλο">Άλλο</option>
+      </select>
+    </div>
+
+    {# Περιοχή #}
+    <div>
+      <label for="periochi-gym" class="block text-sm font-medium text-slate-700 mb-1.5">
+        Περιοχή
+      </label>
+      <input
+        type="text"
+        id="periochi-gym"
+        name="periochi"
+        required
+        placeholder="π.χ. Γλυφάδα, Περιστέρι, Θεσσαλονίκη"
+        class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors"
+      >
+    </div>
+
+    {# Email ή Τηλέφωνο #}
+    <div>
+      <label for="epikoinonia-gym" class="block text-sm font-medium text-slate-700 mb-1.5">
+        Email ή Τηλέφωνο
+      </label>
+      <input
+        type="text"
+        id="epikoinonia-gym"
+        name="epikoinonia"
+        required
+        placeholder="Για να επικοινωνήσουμε μαζί σας"
+        class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors"
+      >
+    </div>
+
+    {# Checkbox trial/online booking #}
+    <div class="flex items-start gap-3">
+      <input
+        type="checkbox"
+        id="online-booking"
+        name="online_booking"
+        value="Ναι"
+        class="mt-1 w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand focus:ring-2"
+      >
+      <label for="online-booking" class="text-sm text-slate-600">
+        Θέλω online εγγραφή ή booking για δοκιμαστικό (trial)
+      </label>
+    </div>
+
+    {# Submit Button #}
+    <button
+      type="submit"
+      class="w-full px-6 py-3.5 text-base font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-lg"
+    >
+      Λάβετε πρόταση
+    </button>
+
+    <p class="text-xs text-slate-500 text-center mt-4">
+      Απαντάμε εντός 24 ωρών. Χωρίς spam.
+    </p>
+  </form>
+</div>
