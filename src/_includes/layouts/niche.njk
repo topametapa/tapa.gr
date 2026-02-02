@@ -28,31 +28,52 @@ layout: base.njk
   {% set relatedNiches = [niches[nextIndex1], niches[nextIndex2]] %}
 {% endif %}
 
-<section class="section bg-slate-50 border-b border-slate-200">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="{% if niche and niche.hero_bg %}relative min-h-[50vh] flex items-center overflow-hidden{% else %}section bg-slate-50 border-b border-slate-200{% endif %}">
+  {% if niche and niche.hero_bg %}
+  {# Hero Background Image - AVIF → WebP → JPG #}
+  <picture>
+    <source srcset="{{ niche.hero_bg.avif }}" type="image/avif">
+    <source srcset="{{ niche.hero_bg.webp }}" type="image/webp">
+    <img
+      src="{{ niche.hero_bg.jpg }}"
+      alt=""
+      width="1920"
+      height="1280"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      aria-hidden="true"
+    >
+  </picture>
+  {# Dark Overlay for text contrast #}
+  <div class="absolute inset-0 bg-slate-900/70" aria-hidden="true"></div>
+  {% endif %}
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 {% if niche and niche.hero_bg %}relative z-10 py-16{% endif %}">
     <div class="max-w-4xl mx-auto text-center">
       {# Breadcrumb - visual only #}
       <nav aria-label="Breadcrumb" class="mb-6">
-        <ol class="flex items-center justify-center gap-2 text-sm text-slate-500">
+        <ol class="flex items-center justify-center gap-2 text-sm {% if niche and niche.hero_bg %}text-slate-300{% else %}text-slate-500{% endif %}">
           <li>
-            <a href="/" class="hover:text-brand-700 transition-colors">Αρχική</a>
+            <a href="/" class="{% if niche and niche.hero_bg %}hover:text-white{% else %}hover:text-brand-700{% endif %} transition-colors">Αρχική</a>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <a href="/istoselides/" class="hover:text-brand-700 transition-colors">Ιστοσελίδες</a>
+            <a href="/istoselides/" class="{% if niche and niche.hero_bg %}hover:text-white{% else %}hover:text-brand-700{% endif %} transition-colors">Ιστοσελίδες</a>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <span class="text-slate-900 font-medium">{{ niche.name if niche else nicheTitle }}</span>
+            <span class="{% if niche and niche.hero_bg %}text-white{% else %}text-slate-900{% endif %} font-medium">{{ niche.name if niche else nicheTitle }}</span>
           </li>
         </ol>
       </nav>
 
-      <span class="text-brand-700 font-semibold text-sm uppercase tracking-wide">{{ nicheLabel | default("Εξειδικευμένη Λύση") }}</span>
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mt-4">
+      <span class="{% if niche and niche.hero_bg %}text-brand{% else %}text-brand-700{% endif %} font-semibold text-sm uppercase tracking-wide">{{ nicheLabel | default("Εξειδικευμένη Λύση") }}</span>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight {% if niche and niche.hero_bg %}text-white{% else %}text-slate-900{% endif %} mt-4">
         {{ niche.h1_title if niche else ("Κατασκευή Ιστοσελίδων για " ~ nicheTitle) }}
       </h1>
-      <p class="section-subtitle mx-auto text-center">
+      <p class="section-subtitle mx-auto text-center {% if niche and niche.hero_bg %}text-slate-200{% endif %}">
         {{ niche.hero_subtitle if niche else nicheDescription }}
       </p>
     </div>

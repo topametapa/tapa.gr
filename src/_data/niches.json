@@ -310,6 +310,11 @@
     "meta_desc": "Κατασκευή ιστοσελίδας για rent a car με πολλαπλές γλώσσες, landing pages ανά περιοχή, φόρμες κράτησης. Στόχευση τουριστών.",
     "icon": "car",
     "primary": true,
+    "hero_bg": {
+      "avif": "/assets/rent-car-bg.avif",
+      "webp": "/assets/rent-car-bg.webp",
+      "jpg": "/assets/rent-car-bg.jpg"
+    },
     "features_intro": "Σχεδιασμένα για να μετατρέπουν τουρίστες σε κρατήσεις με καθαρό booking flow.",
     "features": [
       "Πολλαπλές γλώσσες",
